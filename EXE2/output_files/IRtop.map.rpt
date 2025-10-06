@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IRtop
-Mon Oct  6 15:05:35 2025
+Mon Oct  6 15:13:41 2025
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct  6 15:05:35 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct  6 15:13:41 2025       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; IRtop                                       ;
 ; Top-level Entity Name           ; IRtop                                       ;
@@ -175,7 +175,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -186,20 +186,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-; Calc.v                           ; yes             ; User Verilog HDL File        ; /home/sysele2503/EXE2/Calc.v                                                      ;         ;
-; IRtop.v                          ; yes             ; User Verilog HDL File        ; /home/sysele2503/EXE2/IRtop.v                                                     ;         ;
-; IR.v                             ; yes             ; User Verilog HDL File        ; /home/sysele2503/EXE2/IR.v                                                        ;         ;
+; Calc.v                           ; yes             ; User Verilog HDL File        ; /home/sysele2503/exe/EXE2/Calc.v                                                  ;         ;
+; IRtop.v                          ; yes             ; User Verilog HDL File        ; /home/sysele2503/exe/EXE2/IRtop.v                                                 ;         ;
+; IR.v                             ; yes             ; User Verilog HDL File        ; /home/sysele2503/exe/EXE2/IR.v                                                    ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/cad/Altera/Quartus-21.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/cad/Altera/Quartus-21.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/cad/Altera/Quartus-21.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal211.inc                   ; yes             ; Megafunction                 ; /home/cad/Altera/Quartus-21.1/quartus/libraries/megafunctions/aglobal211.inc      ;         ;
-; db/lpm_divide_n3m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/EXE2/db/lpm_divide_n3m.tdf                                       ;         ;
-; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/EXE2/db/sign_div_unsign_qlh.tdf                                  ;         ;
-; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/EXE2/db/alt_u_div_qve.tdf                                        ;         ;
-; db/lpm_divide_kbm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/EXE2/db/lpm_divide_kbm.tdf                                       ;         ;
-; db/lpm_divide_7dm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/EXE2/db/lpm_divide_7dm.tdf                                       ;         ;
-; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/EXE2/db/sign_div_unsign_dnh.tdf                                  ;         ;
-; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/EXE2/db/alt_u_div_03f.tdf                                        ;         ;
+; db/lpm_divide_n3m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/exe/EXE2/db/lpm_divide_n3m.tdf                                   ;         ;
+; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/exe/EXE2/db/sign_div_unsign_qlh.tdf                              ;         ;
+; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/exe/EXE2/db/alt_u_div_qve.tdf                                    ;         ;
+; db/lpm_divide_kbm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/exe/EXE2/db/lpm_divide_kbm.tdf                                   ;         ;
+; db/lpm_divide_7dm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/exe/EXE2/db/lpm_divide_7dm.tdf                                   ;         ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/exe/EXE2/db/sign_div_unsign_dnh.tdf                              ;         ;
+; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/sysele2503/exe/EXE2/db/alt_u_div_03f.tdf                                    ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
@@ -541,80 +541,80 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Oct  6 15:05:04 2025
+    Info: Processing started: Mon Oct  6 15:13:16 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EXE2 -c IRtop
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file Calc.v
-    Info (12023): Found entity 1: Calc File: /home/sysele2503/EXE2/Calc.v Line: 1
+    Info (12023): Found entity 1: Calc File: /home/sysele2503/exe/EXE2/Calc.v Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file IRtop.v
-    Info (12023): Found entity 1: IRtop File: /home/sysele2503/EXE2/IRtop.v Line: 1
-    Info (12023): Found entity 2: SEG_MRK File: /home/sysele2503/EXE2/IRtop.v Line: 111
-    Info (12023): Found entity 3: SEG_HEX File: /home/sysele2503/EXE2/IRtop.v Line: 135
+    Info (12023): Found entity 1: IRtop File: /home/sysele2503/exe/EXE2/IRtop.v Line: 1
+    Info (12023): Found entity 2: SEG_MRK File: /home/sysele2503/exe/EXE2/IRtop.v Line: 111
+    Info (12023): Found entity 3: SEG_HEX File: /home/sysele2503/exe/EXE2/IRtop.v Line: 135
 Info (12021): Found 1 design units, including 1 entities, in source file IR.v
-    Info (12023): Found entity 1: IR_RECEIVE File: /home/sysele2503/EXE2/IR.v Line: 1
+    Info (12023): Found entity 1: IR_RECEIVE File: /home/sysele2503/exe/EXE2/IR.v Line: 1
 Info (12127): Elaborating entity "IRtop" for the top level hierarchy
-Warning (10034): Output port "IRDA_TXD" at IRtop.v(25) has no driver File: /home/sysele2503/EXE2/IRtop.v Line: 25
-Info (12128): Elaborating entity "Calc" for hierarchy "Calc:calc" File: /home/sysele2503/EXE2/IRtop.v Line: 47
-Warning (10230): Verilog HDL assignment warning at Calc.v(29): truncated value with size 32 to match size of target (16) File: /home/sysele2503/EXE2/Calc.v Line: 29
-Warning (10230): Verilog HDL assignment warning at Calc.v(38): truncated value with size 32 to match size of target (4) File: /home/sysele2503/EXE2/Calc.v Line: 38
-Warning (10230): Verilog HDL assignment warning at Calc.v(39): truncated value with size 32 to match size of target (16) File: /home/sysele2503/EXE2/Calc.v Line: 39
-Warning (10230): Verilog HDL assignment warning at Calc.v(43): truncated value with size 32 to match size of target (4) File: /home/sysele2503/EXE2/Calc.v Line: 43
-Warning (10230): Verilog HDL assignment warning at Calc.v(44): truncated value with size 32 to match size of target (16) File: /home/sysele2503/EXE2/Calc.v Line: 44
-Warning (10230): Verilog HDL assignment warning at Calc.v(48): truncated value with size 32 to match size of target (4) File: /home/sysele2503/EXE2/Calc.v Line: 48
-Warning (10230): Verilog HDL assignment warning at Calc.v(49): truncated value with size 32 to match size of target (16) File: /home/sysele2503/EXE2/Calc.v Line: 49
-Warning (10230): Verilog HDL assignment warning at Calc.v(53): truncated value with size 32 to match size of target (4) File: /home/sysele2503/EXE2/Calc.v Line: 53
-Warning (10230): Verilog HDL assignment warning at Calc.v(54): truncated value with size 32 to match size of target (16) File: /home/sysele2503/EXE2/Calc.v Line: 54
-Warning (10230): Verilog HDL assignment warning at Calc.v(58): truncated value with size 32 to match size of target (4) File: /home/sysele2503/EXE2/Calc.v Line: 58
-Warning (10230): Verilog HDL assignment warning at Calc.v(59): truncated value with size 32 to match size of target (16) File: /home/sysele2503/EXE2/Calc.v Line: 59
-Warning (10230): Verilog HDL assignment warning at Calc.v(62): truncated value with size 32 to match size of target (3) File: /home/sysele2503/EXE2/Calc.v Line: 62
-Warning (10034): Output port "Dig5" at Calc.v(4) has no driver File: /home/sysele2503/EXE2/Calc.v Line: 4
-Info (12128): Elaborating entity "SEG_HEX" for hierarchy "SEG_HEX:uu2" File: /home/sysele2503/EXE2/IRtop.v Line: 54
-Info (12128): Elaborating entity "SEG_MRK" for hierarchy "SEG_MRK:uu9" File: /home/sysele2503/EXE2/IRtop.v Line: 74
-Info (12128): Elaborating entity "IR_RECEIVE" for hierarchy "IR_RECEIVE:u1" File: /home/sysele2503/EXE2/IRtop.v Line: 90
+Warning (10034): Output port "IRDA_TXD" at IRtop.v(25) has no driver File: /home/sysele2503/exe/EXE2/IRtop.v Line: 25
+Info (12128): Elaborating entity "Calc" for hierarchy "Calc:calc" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 47
+Warning (10230): Verilog HDL assignment warning at Calc.v(29): truncated value with size 32 to match size of target (16) File: /home/sysele2503/exe/EXE2/Calc.v Line: 29
+Warning (10230): Verilog HDL assignment warning at Calc.v(38): truncated value with size 32 to match size of target (4) File: /home/sysele2503/exe/EXE2/Calc.v Line: 38
+Warning (10230): Verilog HDL assignment warning at Calc.v(39): truncated value with size 32 to match size of target (16) File: /home/sysele2503/exe/EXE2/Calc.v Line: 39
+Warning (10230): Verilog HDL assignment warning at Calc.v(43): truncated value with size 32 to match size of target (4) File: /home/sysele2503/exe/EXE2/Calc.v Line: 43
+Warning (10230): Verilog HDL assignment warning at Calc.v(44): truncated value with size 32 to match size of target (16) File: /home/sysele2503/exe/EXE2/Calc.v Line: 44
+Warning (10230): Verilog HDL assignment warning at Calc.v(48): truncated value with size 32 to match size of target (4) File: /home/sysele2503/exe/EXE2/Calc.v Line: 48
+Warning (10230): Verilog HDL assignment warning at Calc.v(49): truncated value with size 32 to match size of target (16) File: /home/sysele2503/exe/EXE2/Calc.v Line: 49
+Warning (10230): Verilog HDL assignment warning at Calc.v(53): truncated value with size 32 to match size of target (4) File: /home/sysele2503/exe/EXE2/Calc.v Line: 53
+Warning (10230): Verilog HDL assignment warning at Calc.v(54): truncated value with size 32 to match size of target (16) File: /home/sysele2503/exe/EXE2/Calc.v Line: 54
+Warning (10230): Verilog HDL assignment warning at Calc.v(58): truncated value with size 32 to match size of target (4) File: /home/sysele2503/exe/EXE2/Calc.v Line: 58
+Warning (10230): Verilog HDL assignment warning at Calc.v(59): truncated value with size 32 to match size of target (16) File: /home/sysele2503/exe/EXE2/Calc.v Line: 59
+Warning (10230): Verilog HDL assignment warning at Calc.v(62): truncated value with size 32 to match size of target (3) File: /home/sysele2503/exe/EXE2/Calc.v Line: 62
+Warning (10034): Output port "Dig5" at Calc.v(4) has no driver File: /home/sysele2503/exe/EXE2/Calc.v Line: 4
+Info (12128): Elaborating entity "SEG_HEX" for hierarchy "SEG_HEX:uu2" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 54
+Info (12128): Elaborating entity "SEG_MRK" for hierarchy "SEG_MRK:uu9" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 74
+Info (12128): Elaborating entity "IR_RECEIVE" for hierarchy "IR_RECEIVE:u1" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 90
 Info (278001): Inferred 5 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Mod0" File: /home/sysele2503/EXE2/Calc.v Line: 38
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Mod1" File: /home/sysele2503/EXE2/Calc.v Line: 43
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Div0" File: /home/sysele2503/EXE2/Calc.v Line: 39
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Div1" File: /home/sysele2503/EXE2/Calc.v Line: 44
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Div2" File: /home/sysele2503/EXE2/Calc.v Line: 95
-Info (12130): Elaborated megafunction instantiation "Calc:calc|lpm_divide:Mod0" File: /home/sysele2503/EXE2/Calc.v Line: 38
-Info (12133): Instantiated megafunction "Calc:calc|lpm_divide:Mod0" with the following parameter: File: /home/sysele2503/EXE2/Calc.v Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Mod0" File: /home/sysele2503/exe/EXE2/Calc.v Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Mod1" File: /home/sysele2503/exe/EXE2/Calc.v Line: 43
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Div0" File: /home/sysele2503/exe/EXE2/Calc.v Line: 39
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Div1" File: /home/sysele2503/exe/EXE2/Calc.v Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Calc:calc|Div2" File: /home/sysele2503/exe/EXE2/Calc.v Line: 95
+Info (12130): Elaborated megafunction instantiation "Calc:calc|lpm_divide:Mod0" File: /home/sysele2503/exe/EXE2/Calc.v Line: 38
+Info (12133): Instantiated megafunction "Calc:calc|lpm_divide:Mod0" with the following parameter: File: /home/sysele2503/exe/EXE2/Calc.v Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_n3m.tdf
-    Info (12023): Found entity 1: lpm_divide_n3m File: /home/sysele2503/EXE2/db/lpm_divide_n3m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_n3m File: /home/sysele2503/exe/EXE2/db/lpm_divide_n3m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_qlh File: /home/sysele2503/EXE2/db/sign_div_unsign_qlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_qlh File: /home/sysele2503/exe/EXE2/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
-    Info (12023): Found entity 1: alt_u_div_qve File: /home/sysele2503/EXE2/db/alt_u_div_qve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "Calc:calc|lpm_divide:Div0" File: /home/sysele2503/EXE2/Calc.v Line: 39
-Info (12133): Instantiated megafunction "Calc:calc|lpm_divide:Div0" with the following parameter: File: /home/sysele2503/EXE2/Calc.v Line: 39
+    Info (12023): Found entity 1: alt_u_div_qve File: /home/sysele2503/exe/EXE2/db/alt_u_div_qve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "Calc:calc|lpm_divide:Div0" File: /home/sysele2503/exe/EXE2/Calc.v Line: 39
+Info (12133): Instantiated megafunction "Calc:calc|lpm_divide:Div0" with the following parameter: File: /home/sysele2503/exe/EXE2/Calc.v Line: 39
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_kbm.tdf
-    Info (12023): Found entity 1: lpm_divide_kbm File: /home/sysele2503/EXE2/db/lpm_divide_kbm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "Calc:calc|lpm_divide:Div2" File: /home/sysele2503/EXE2/Calc.v Line: 95
-Info (12133): Instantiated megafunction "Calc:calc|lpm_divide:Div2" with the following parameter: File: /home/sysele2503/EXE2/Calc.v Line: 95
+    Info (12023): Found entity 1: lpm_divide_kbm File: /home/sysele2503/exe/EXE2/db/lpm_divide_kbm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "Calc:calc|lpm_divide:Div2" File: /home/sysele2503/exe/EXE2/Calc.v Line: 95
+Info (12133): Instantiated megafunction "Calc:calc|lpm_divide:Div2" with the following parameter: File: /home/sysele2503/exe/EXE2/Calc.v Line: 95
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_7dm.tdf
-    Info (12023): Found entity 1: lpm_divide_7dm File: /home/sysele2503/EXE2/db/lpm_divide_7dm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_7dm File: /home/sysele2503/exe/EXE2/db/lpm_divide_7dm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dnh File: /home/sysele2503/EXE2/db/sign_div_unsign_dnh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_dnh File: /home/sysele2503/exe/EXE2/db/sign_div_unsign_dnh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
-    Info (12023): Found entity 1: alt_u_div_03f File: /home/sysele2503/EXE2/db/alt_u_div_03f.tdf Line: 23
+    Info (12023): Found entity 1: alt_u_div_03f File: /home/sysele2503/exe/EXE2/db/alt_u_div_03f.tdf Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/sysele2503/EXE2/IRtop.v Line: 20
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/sysele2503/EXE2/IRtop.v Line: 20
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/sysele2503/EXE2/IRtop.v Line: 20
-    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: /home/sysele2503/EXE2/IRtop.v Line: 25
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/sysele2503/exe/EXE2/IRtop.v Line: 20
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/sysele2503/exe/EXE2/IRtop.v Line: 20
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/sysele2503/exe/EXE2/IRtop.v Line: 20
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: /home/sysele2503/exe/EXE2/IRtop.v Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "VGAtop" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity VGAtop -section_id Top was ignored
@@ -644,29 +644,29 @@ Warning (20013): Ignored 24 assignments for entity "VGAtop" -- entity does not e
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 14 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/sysele2503/EXE2/IRtop.v Line: 6
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/sysele2503/EXE2/IRtop.v Line: 6
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/sysele2503/EXE2/IRtop.v Line: 6
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/sysele2503/EXE2/IRtop.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[0]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/sysele2503/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 6
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 6
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 6
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[0]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/sysele2503/exe/EXE2/IRtop.v Line: 9
 Info (21057): Implemented 1216 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 53 output pins
     Info (21061): Implemented 1146 logic cells
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
-    Info: Peak virtual memory: 653 megabytes
-    Info: Processing ended: Mon Oct  6 15:05:35 2025
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 637 megabytes
+    Info: Processing ended: Mon Oct  6 15:13:41 2025
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:18
 
 
