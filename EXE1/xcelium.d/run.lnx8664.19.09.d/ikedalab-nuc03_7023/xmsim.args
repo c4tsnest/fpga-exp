@@ -1,0 +1,27 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++gui
++access+r
+-gui
+-TCL
+-MESSAGES
++EMGRLOG
+xrun.log
+-XLSTIME
+1759725592
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.19.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.19.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.19.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	19.09-s008"
+-XLNAME
+./xcelium.d/run.lnx8664.19.09.d/ikedalab-nuc03_7023

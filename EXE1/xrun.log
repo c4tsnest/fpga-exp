@@ -1,0 +1,21 @@
+xrun(64): 19.09-s008: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.09-s008: Started on Oct 06, 2025 at 13:39:52 JST
+xrun
+	+gui
+	+access+r
+	-s
+	RouletteSim.v
+	Roulette.v
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /home/cad/cadence/XCELIUM1909/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm simtop.clk simtop.hex0 simtop.ledr simtop.nrst simtop.sw
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 2820130916 NS + 0
+./RouletteSim.v:21 	$finish;
+xcelium> 
