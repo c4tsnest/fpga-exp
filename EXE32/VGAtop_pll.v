@@ -119,11 +119,12 @@ module VGAtop (
       .B(posb)
   );
 
-  VGA_Ctrl u9 (  //	Host Side
+  VGA_Ctrl u9 (
+      // Host Side
       .oCurrent_X(VGA_X),
       .oCurrent_Y(VGA_Y),
       .oRequest(VGA_Read),
-      //	VGA Side
+      // VGA Side
       .oVGA_HS(VGA_HS),
       .oVGA_VS(VGA_VS),
       .oVGA_SYNC(VGA_SYNC_N),
@@ -132,7 +133,7 @@ module VGAtop (
       .oVGA_G(VGA_G),
       .oVGA_B(VGA_B),
 
-      //	Control Signal
+      //Control Signal
       .iCLK  (CLK40),
       .iRST_N(NRST),
 

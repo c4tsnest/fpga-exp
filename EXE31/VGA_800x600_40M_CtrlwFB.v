@@ -1,4 +1,5 @@
-module VGA_Ctrl (  //Host Side
+module VGA_Ctrl (
+    //Host Side
     oCurrent_X,
     oCurrent_Y,
     oRequest,
@@ -43,7 +44,7 @@ module VGA_Ctrl (  //Host Side
   reg [10:0] H_Cont;
   reg [10:0] V_Cont;
   ////////////////////////////////////////////////////////////
-  //Horizontal	Parameter
+  //Horizontal Parameter
   parameter H_FRONT = 40;
   parameter H_SYNC = 128;
   parameter H_BACK = 88;
@@ -61,7 +62,7 @@ module VGA_Ctrl (  //Host Side
   ////////////////////////////////////////////////////////////
   assign oVGA_SYNC = 1'b1;  //This pin is unused.
   assign oVGA_BLANK = ~((H_Cont < H_BLANK) || (V_Cont < V_BLANK));
-  assign oRequest = ((H_Cont>=H_BLANK && H_Cont<H_TOTAL)	&&
+  assign oRequest = ((H_Cont>=H_BLANK && H_Cont<H_TOTAL) &&
 					 (V_Cont>=V_BLANK && V_Cont<V_TOTAL));
   assign oCurrent_X = (H_Cont >= H_BLANK - 1) ? H_Cont - H_BLANK + 1 : 11'h0;
   assign oCurrent_Y = (V_Cont >= V_BLANK) ? V_Cont - V_BLANK : 11'h0;
@@ -84,13 +85,13 @@ module VGA_Ctrl (  //Host Side
 
   assign NextVAddr = {X, Y};
   // Blank
-  assign	oVGA_R = (oCurrent_X >= 11 'b 010_0000_0000 || oCurrent_Y >= 11 'b 010_0000_0000 ) ? 8'b 0 : {vramR[8:6],5'b 0};
-  assign	oVGA_G = (oCurrent_X >= 11 'b 010_0000_0000 || oCurrent_Y >= 11 'b 010_0000_0000 ) ? 8'b 0 : {vramR[5:3],5'b 0};
-  assign	oVGA_B = (oCurrent_X >= 11 'b 010_0000_0000 || oCurrent_Y >= 11 'b 010_0000_0000 ) ? 8'b 0 : {vramR[2:0],5'b 0};
+  assign oVGA_R = (oCurrent_X >= 11 'b 010_0000_0000 || oCurrent_Y >= 11 'b 010_0000_0000 ) ? 8'b 0 : {vramR[8:6],5'b 0};
+  assign oVGA_G = (oCurrent_X >= 11 'b 010_0000_0000 || oCurrent_Y >= 11 'b 010_0000_0000 ) ? 8'b 0 : {vramR[5:3],5'b 0};
+  assign oVGA_B = (oCurrent_X >= 11 'b 010_0000_0000 || oCurrent_Y >= 11 'b 010_0000_0000 ) ? 8'b 0 : {vramR[2:0],5'b 0};
   // Repeat
-  //   assign	oVGA_R = {vramR[8:6],5'b 0};
-  //   assign	oVGA_G = {vramR[5:3],5'b 0};
-  //   assign	oVGA_B = {vramR[2:0],5'b 0};
+  //   assign oVGA_R = {vramR[8:6],5'b 0};
+  //   assign oVGA_G = {vramR[5:3],5'b 0};
+  //   assign oVGA_B = {vramR[2:0],5'b 0};
 
   assign write_addr = {write_y, write_x};
 
@@ -108,17 +109,17 @@ module VGA_Ctrl (  //Host Side
 
 
   // CRAM 16 x 16 (256w x 8bit)
-  //   cram	u11 (
-  //	     .clock(iCLK),
-  //	     .data(cw_code),
+  //   cram u11 (
+  //     .clock(iCLK),
+  //     .data(cw_code),
   //             .wraddress(cwraddress),
   //             .wren(1'b 1),
   //             .rdaddress(crdaddress),
   //             .q(cr_code)
-  //	     );
+  //     );
   // VRAM 256 x 256 (65,536w x 9bit)
-  //   vram64k	u10 (   // for Quartus Synthesis
-  vram u10 (  // for Simulation
+  vram64k u10 (  // for Quartus Synthesis
+      //vram u10 (  // for Simulation
       .clock(iCLK),
       .data({write_r, write_g, write_b}),
       .wraddress(write_addr),
@@ -129,7 +130,7 @@ module VGA_Ctrl (  //Host Side
 
 
 
-  //	Horizontal Generator: Refer to the pixel clock
+  // Horizontal Generator: Refer to the pixel clock
   always @(posedge iCLK or negedge iRST_N) begin
     if (!iRST_N) begin
       H_Cont  <= 0;
@@ -137,15 +138,15 @@ module VGA_Ctrl (  //Host Side
     end else begin
       if (H_Cont < H_TOTAL - 1) H_Cont <= H_Cont + 1'b1;
       else H_Cont <= 0;
-      //	Horizontal Sync
-      if (H_Cont == H_FRONT - 1)  //	Front porch end
+      // Horizontal Sync
+      if (H_Cont == H_FRONT - 1)  // Front porch end
         oVGA_HS <= 1'b0;
-      if (H_Cont == H_FRONT + H_SYNC - 1)  //	Sync pulse end
+      if (H_Cont == H_FRONT + H_SYNC - 1)  // Sync pulse end
         oVGA_HS <= 1'b1;
     end
   end
 
-  //	Vertical Generator: Refer to the horizontal sync
+  // Vertical Generator: Refer to the horizontal sync
   always @(posedge oVGA_HS or negedge iRST_N) begin
     if (!iRST_N) begin
       V_Cont  <= 0;
@@ -153,10 +154,10 @@ module VGA_Ctrl (  //Host Side
     end else begin
       if (V_Cont < V_TOTAL - 1) V_Cont <= V_Cont + 1'b1;
       else V_Cont <= 0;
-      //	Vertical Sync
-      if (V_Cont == V_FRONT - 1)  //	Front porch end
+      // Vertical Sync
+      if (V_Cont == V_FRONT - 1)  // Front porch end
         oVGA_VS <= 1'b0;
-      if (V_Cont == V_FRONT + V_SYNC - 1)  //	Sync pulse end
+      if (V_Cont == V_FRONT + V_SYNC - 1)  // Sync pulse end
         oVGA_VS <= 1'b1;
     end
   end

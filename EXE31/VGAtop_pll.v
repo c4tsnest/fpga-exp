@@ -45,7 +45,11 @@ module VGAtop (
   wire [7:0] posx, posy;
   wire [2:0] posr, posg, posb;
 
-  //   pll pll (.refclk(CLK), .rst(~NRST), .outclk_0(CLK40));
+  pll pll (
+      .refclk(CLK),
+      .rst(~NRST),
+      .outclk_0(CLK40)
+  );
 
   draw u8 (
       .CLK(CLK40),
