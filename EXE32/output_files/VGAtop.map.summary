@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Tue Oct  7 13:49:55 2025
+Analysis & Synthesis Status : Successful - Tue Oct  7 14:54:27 2025
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : VGAtop
 Top-level Entity Name : VGAtop
@@ -8,7 +8,7 @@ Total registers : 213
 Total pins : 96
 Total virtual pins : 0
 Total block memory bits : 589,824
-Total DSP Blocks : 0
+Total DSP Blocks : 4
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

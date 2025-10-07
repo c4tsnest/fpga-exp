@@ -1,5 +1,5 @@
 Fitter report for VGAtop
-Tue Oct  7 13:51:36 2025
+Tue Oct  7 14:56:46 2025
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -29,15 +29,17 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
  21. Control Signals
  22. Global & Other Fast Signals
  23. Fitter RAM Summary
- 24. Routing Usage Summary
- 25. I/O Rules Summary
- 26. I/O Rules Details
- 27. I/O Rules Matrix
- 28. Fitter Device Options
- 29. Operating Settings and Conditions
- 30. Estimated Delay Added for Hold Timing Summary
- 31. Estimated Delay Added for Hold Timing Details
- 32. Fitter Messages
+ 24. Fitter DSP Block Usage Summary
+ 25. DSP Block Details
+ 26. Routing Usage Summary
+ 27. I/O Rules Summary
+ 28. I/O Rules Details
+ 29. I/O Rules Matrix
+ 30. Fitter Device Options
+ 31. Operating Settings and Conditions
+ 32. Estimated Delay Added for Hold Timing Summary
+ 33. Estimated Delay Added for Hold Timing Details
+ 34. Fitter Messages
 
 
 
@@ -64,20 +66,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Oct  7 13:51:36 2025       ;
+; Fitter Status                   ; Successful - Tue Oct  7 14:56:46 2025       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; VGAtop                                      ;
 ; Top-level Entity Name           ; VGAtop                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 207 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 227                                         ;
+; Logic utilization (in ALMs)     ; 248 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 230                                         ;
 ; Total pins                      ; 96 / 499 ( 19 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 589,824 / 5,662,720 ( 10 % )                ;
 ; Total RAM Blocks                ; 72 / 553 ( 13 % )                           ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
+; Total DSP Blocks                ; 4 / 112 ( 4 % )                             ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
@@ -155,14 +157,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
-;     Processor 3            ;   1.3%      ;
-;     Processor 4            ;   1.3%      ;
+;     Processor 2            ;   2.0%      ;
+;     Processor 3            ;   1.8%      ;
+;     Processor 4            ;   1.8%      ;
 +----------------------------+-------------+
 
 
@@ -174,8 +176,8 @@ https://fpgasoftware.intel.com/eula.
 ; pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0                                    ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                                                                       ;                  ;                       ;
 ; VGA_Ctrl:u9|H_Cont[1]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|H_Cont[1]~DUPLICATE                                                                                       ;                  ;                       ;
 ; VGA_Ctrl:u9|H_Cont[2]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|H_Cont[2]~DUPLICATE                                                                                       ;                  ;                       ;
-; VGA_Ctrl:u9|H_Cont[3]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|H_Cont[3]~DUPLICATE                                                                                       ;                  ;                       ;
-; VGA_Ctrl:u9|H_Cont[4]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|H_Cont[4]~DUPLICATE                                                                                       ;                  ;                       ;
+; VGA_Ctrl:u9|H_Cont[5]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|H_Cont[5]~DUPLICATE                                                                                       ;                  ;                       ;
+; VGA_Ctrl:u9|H_Cont[7]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|H_Cont[7]~DUPLICATE                                                                                       ;                  ;                       ;
 ; VGA_Ctrl:u9|H_Cont[9]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|H_Cont[9]~DUPLICATE                                                                                       ;                  ;                       ;
 ; VGA_Ctrl:u9|H_Cont[10]                                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|H_Cont[10]~DUPLICATE                                                                                      ;                  ;                       ;
 ; VGA_Ctrl:u9|V_Cont[0]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|V_Cont[0]~DUPLICATE                                                                                       ;                  ;                       ;
@@ -184,8 +186,11 @@ https://fpgasoftware.intel.com/eula.
 ; VGA_Ctrl:u9|V_Cont[3]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|V_Cont[3]~DUPLICATE                                                                                       ;                  ;                       ;
 ; VGA_Ctrl:u9|V_Cont[4]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|V_Cont[4]~DUPLICATE                                                                                       ;                  ;                       ;
 ; VGA_Ctrl:u9|V_Cont[5]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|V_Cont[5]~DUPLICATE                                                                                       ;                  ;                       ;
+; VGA_Ctrl:u9|V_Cont[6]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|V_Cont[6]~DUPLICATE                                                                                       ;                  ;                       ;
+; VGA_Ctrl:u9|V_Cont[7]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|V_Cont[7]~DUPLICATE                                                                                       ;                  ;                       ;
 ; VGA_Ctrl:u9|V_Cont[10]                                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|V_Cont[10]~DUPLICATE                                                                                      ;                  ;                       ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[1]~DUPLICATE ;                  ;                       ;
+; VGA_Ctrl:u9|oVGA_VS                                                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|oVGA_VS~DUPLICATE                                                                                         ;                  ;                       ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[2]~DUPLICATE ;                  ;                       ;
 +-------------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -195,8 +200,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 843 ) ; 0.00 % ( 0 / 843 )         ; 0.00 % ( 0 / 843 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 843 ) ; 0.00 % ( 0 / 843 )         ; 0.00 % ( 0 / 843 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 916 ) ; 0.00 % ( 0 / 916 )         ; 0.00 % ( 0 / 916 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 916 ) ; 0.00 % ( 0 / 916 )         ; 0.00 % ( 0 / 916 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -219,7 +224,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 832 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 905 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 11 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -235,41 +240,41 @@ The pin-out file can be found in /home/sysele2503/exp/EXE32/output_files/VGAtop.
 +-------------------------------------------------------------+-----------------------+-------+
 ; Resource                                                    ; Usage                 ; %     ;
 +-------------------------------------------------------------+-----------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 207 / 41,910          ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 207                   ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 214 / 41,910          ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 103                   ;       ;
-;         [b] ALMs used for LUT logic                         ; 107                   ;       ;
-;         [c] ALMs used for registers                         ; 4                     ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 248 / 41,910          ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 248                   ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 255 / 41,910          ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 102                   ;       ;
+;         [b] ALMs used for LUT logic                         ; 148                   ;       ;
+;         [c] ALMs used for registers                         ; 5                     ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 41,910            ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41,910            ; 0 %   ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 8 / 41,910            ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 41,910            ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                     ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ;       ;
-;         [c] Due to LAB input limits                         ; 0                     ;       ;
+;         [c] Due to LAB input limits                         ; 1                     ;       ;
 ;         [d] Due to virtual I/Os                             ; 0                     ;       ;
 ;                                                             ;                       ;       ;
 ; Difficulty packing design                                   ; Low                   ;       ;
 ;                                                             ;                       ;       ;
-; Total LABs:  partially or completely used                   ; 29 / 4,191            ; < 1 % ;
-;     -- Logic LABs                                           ; 29                    ;       ;
+; Total LABs:  partially or completely used                   ; 35 / 4,191            ; < 1 % ;
+;     -- Logic LABs                                           ; 35                    ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ;       ;
 ;                                                             ;                       ;       ;
-; Combinational ALUT usage for logic                          ; 361                   ;       ;
+; Combinational ALUT usage for logic                          ; 430                   ;       ;
 ;     -- 7 input functions                                    ; 2                     ;       ;
-;     -- 6 input functions                                    ; 63                    ;       ;
-;     -- 5 input functions                                    ; 36                    ;       ;
-;     -- 4 input functions                                    ; 74                    ;       ;
-;     -- <=3 input functions                                  ; 186                   ;       ;
-; Combinational ALUT usage for route-throughs                 ; 0                     ;       ;
+;     -- 6 input functions                                    ; 77                    ;       ;
+;     -- 5 input functions                                    ; 40                    ;       ;
+;     -- 4 input functions                                    ; 76                    ;       ;
+;     -- <=3 input functions                                  ; 235                   ;       ;
+; Combinational ALUT usage for route-throughs                 ; 1                     ;       ;
 ;                                                             ;                       ;       ;
-; Dedicated logic registers                                   ; 227                   ;       ;
+; Dedicated logic registers                                   ; 230                   ;       ;
 ;     -- By type:                                             ;                       ;       ;
 ;         -- Primary logic registers                          ; 213 / 83,820          ; < 1 % ;
-;         -- Secondary logic registers                        ; 14 / 83,820           ; < 1 % ;
+;         -- Secondary logic registers                        ; 17 / 83,820           ; < 1 % ;
 ;     -- By function:                                         ;                       ;       ;
 ;         -- Design implementation registers                  ; 213                   ;       ;
-;         -- Routing optimization registers                   ; 14                    ;       ;
+;         -- Routing optimization registers                   ; 17                    ;       ;
 ;                                                             ;                       ;       ;
 ; Virtual pins                                                ; 0                     ;       ;
 ; I/O pins                                                    ; 96 / 499              ; 19 %  ;
@@ -308,7 +313,7 @@ The pin-out file can be found in /home/sysele2503/exp/EXE32/output_files/VGAtop.
 ; Total block memory bits                                     ; 589,824 / 5,662,720   ; 10 %  ;
 ; Total block memory implementation bits                      ; 737,280 / 5,662,720   ; 13 %  ;
 ;                                                             ;                       ;       ;
-; Total DSP Blocks                                            ; 0 / 112               ; 0 %   ;
+; Total DSP Blocks                                            ; 4 / 112               ; 4 %   ;
 ;                                                             ;                       ;       ;
 ; Fractional PLLs                                             ; 1 / 6                 ; 17 %  ;
 ; Global signals                                              ; 1                     ;       ;
@@ -330,12 +335,12 @@ The pin-out file can be found in /home/sysele2503/exp/EXE32/output_files/VGAtop.
 ; Channel PLLs                                                ; 0 / 9                 ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4                 ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2                 ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 1.2% / 1.3% / 1.0%    ;       ;
-; Peak interconnect usage (total/H/V)                         ; 13.3% / 13.9% / 11.5% ;       ;
+; Average interconnect usage (total/H/V)                      ; 1.3% / 1.3% / 1.1%    ;       ;
+; Peak interconnect usage (total/H/V)                         ; 13.7% / 14.1% / 12.5% ;       ;
 ; Maximum fan-out                                             ; 353                   ;       ;
-; Highest non-global fan-out                                  ; 158                   ;       ;
-; Total fan-out                                               ; 4358                  ;       ;
-; Average fan-out                                             ; 5.09                  ;       ;
+; Highest non-global fan-out                                  ; 176                   ;       ;
+; Total fan-out                                               ; 4679                  ;       ;
+; Average fan-out                                             ; 5.01                  ;       ;
 +-------------------------------------------------------------+-----------------------+-------+
 
 
@@ -344,33 +349,33 @@ The pin-out file can be found in /home/sysele2503/exp/EXE32/output_files/VGAtop.
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 207 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 207                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 214 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 103                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 107                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 4                     ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 248 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 248                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 255 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 102                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 148                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 5                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41910 ( 0 % )     ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 8 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
-;         [c] Due to LAB input limits                         ; 0                     ; 0                              ;
+;         [c] Due to LAB input limits                         ; 1                     ; 0                              ;
 ;         [d] Due to virtual I/Os                             ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 29 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
-;     -- Logic LABs                                           ; 29                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 35 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
+;     -- Logic LABs                                           ; 35                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 361                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 430                   ; 0                              ;
 ;     -- 7 input functions                                    ; 2                     ; 0                              ;
-;     -- 6 input functions                                    ; 63                    ; 0                              ;
-;     -- 5 input functions                                    ; 36                    ; 0                              ;
-;     -- 4 input functions                                    ; 74                    ; 0                              ;
-;     -- <=3 input functions                                  ; 186                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
+;     -- 6 input functions                                    ; 77                    ; 0                              ;
+;     -- 5 input functions                                    ; 40                    ; 0                              ;
+;     -- 4 input functions                                    ; 76                    ; 0                              ;
+;     -- <=3 input functions                                  ; 235                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 1                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
@@ -378,10 +383,10 @@ The pin-out file can be found in /home/sysele2503/exp/EXE32/output_files/VGAtop.
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 213 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 14 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 17 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 213                   ; 0                              ;
-;         -- Routing optimization registers                   ; 14                    ; 0                              ;
+;         -- Routing optimization registers                   ; 17                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -390,6 +395,7 @@ The pin-out file can be found in /home/sysele2503/exp/EXE32/output_files/VGAtop.
 ; Total block memory bits                                     ; 589824                ; 0                              ;
 ; Total block memory implementation bits                      ; 737280                ; 0                              ;
 ; M10K block                                                  ; 72 / 553 ( 13 % )     ; 0 / 553 ( 0 % )                ;
+; DSP block                                                   ; 4 / 112 ( 3 % )       ; 0 / 112 ( 0 % )                ;
 ; Clock enable block                                          ; 0 / 116 ( 0 % )       ; 1 / 116 ( < 1 % )              ;
 ; Fractional PLL                                              ; 0 / 6 ( 0 % )         ; 1 / 6 ( 16 % )                 ;
 ; PLL Output Counter                                          ; 0 / 54 ( 0 % )        ; 1 / 54 ( 1 % )                 ;
@@ -397,18 +403,18 @@ The pin-out file can be found in /home/sysele2503/exp/EXE32/output_files/VGAtop.
 ; PLL Reference Clock Select Block                            ; 0 / 6 ( 0 % )         ; 1 / 6 ( 16 % )                 ;
 ;                                                             ;                       ;                                ;
 ; Connections                                                 ;                       ;                                ;
-;     -- Input Connections                                    ; 509                   ; 0                              ;
-;     -- Registered Input Connections                         ; 449                   ; 0                              ;
-;     -- Output Connections                                   ; 0                     ; 509                            ;
+;     -- Input Connections                                    ; 527                   ; 0                              ;
+;     -- Registered Input Connections                         ; 469                   ; 0                              ;
+;     -- Output Connections                                   ; 0                     ; 527                            ;
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 5569                  ; 545                            ;
-;     -- Registered Connections                               ; 1377                  ; 0                              ;
+;     -- Total Connections                                    ; 6067                  ; 563                            ;
+;     -- Registered Connections                               ; 1474                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
-;     -- Top                                                  ; 0                     ; 509                            ;
-;     -- hard_block:auto_generated_inst                       ; 509                   ; 0                              ;
+;     -- Top                                                  ; 0                     ; 527                            ;
+;     -- hard_block:auto_generated_inst                       ; 527                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Partition Interface                                         ;                       ;                                ;
 ;     -- Input Ports                                          ; 15                    ; 2                              ;
@@ -437,7 +443,7 @@ The pin-out file can be found in /home/sysele2503/exp/EXE32/output_files/VGAtop.
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; CLK    ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; KEY[0] ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 158                   ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; KEY[0] ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 176                   ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1] ; AK4   ; 3B       ; 22           ; 0            ; 51           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2] ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[3] ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -1613,17 +1619,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |VGAtop                                      ; 206.5 (12.7)         ; 213.0 (12.7)                     ; 6.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 361 (33)            ; 227 (6)                   ; 0 (0)         ; 589824            ; 72    ; 0          ; 96   ; 0            ; |VGAtop                                                                                                                 ; VGAtop          ; work         ;
-;    |VGA_Ctrl:u9|                             ; 77.2 (46.0)          ; 80.0 (47.4)                      ; 2.8 (1.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 127 (84)            ; 53 (46)                   ; 0 (0)         ; 589824            ; 72    ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9                                                                                                     ; VGA_Ctrl        ; work         ;
-;       |vram64k:u10|                          ; 31.2 (0.0)           ; 32.6 (0.0)                       ; 1.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (0)              ; 7 (0)                     ; 0 (0)         ; 589824            ; 72    ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10                                                                                         ; vram64k         ; work         ;
-;          |altsyncram:altsyncram_component|   ; 31.2 (0.0)           ; 32.6 (0.0)                       ; 1.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (0)              ; 7 (0)                     ; 0 (0)         ; 589824            ; 72    ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component                                                         ; altsyncram      ; work         ;
-;             |altsyncram_60u1:auto_generated| ; 31.2 (1.8)           ; 32.6 (2.2)                       ; 1.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (0)              ; 7 (7)                     ; 0 (0)         ; 589824            ; 72    ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated                          ; altsyncram_60u1 ; work         ;
-;                |decode_61a:rden_decode_b|    ; 6.0 (6.0)            ; 6.0 (6.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b ; decode_61a      ; work         ;
+; |VGAtop                                      ; 248.0 (12.8)         ; 254.5 (13.1)                     ; 7.5 (0.3)                                         ; 1.0 (0.0)                        ; 0.0 (0.0)            ; 430 (33)            ; 230 (6)                   ; 0 (0)         ; 589824            ; 72    ; 4          ; 96   ; 0            ; |VGAtop                                                                                                                 ; VGAtop          ; work         ;
+;    |VGA_Ctrl:u9|                             ; 78.2 (46.3)          ; 81.5 (50.5)                      ; 4.3 (4.2)                                         ; 1.0 (0.0)                        ; 0.0 (0.0)            ; 127 (84)            ; 56 (49)                   ; 0 (0)         ; 589824            ; 72    ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9                                                                                                     ; VGA_Ctrl        ; work         ;
+;       |vram64k:u10|                          ; 31.8 (0.0)           ; 31.0 (0.0)                       ; 0.2 (0.0)                                         ; 1.0 (0.0)                        ; 0.0 (0.0)            ; 43 (0)              ; 7 (0)                     ; 0 (0)         ; 589824            ; 72    ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10                                                                                         ; vram64k         ; work         ;
+;          |altsyncram:altsyncram_component|   ; 31.8 (0.0)           ; 31.0 (0.0)                       ; 0.2 (0.0)                                         ; 1.0 (0.0)                        ; 0.0 (0.0)            ; 43 (0)              ; 7 (0)                     ; 0 (0)         ; 589824            ; 72    ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component                                                         ; altsyncram      ; work         ;
+;             |altsyncram_60u1:auto_generated| ; 31.8 (1.7)           ; 31.0 (1.7)                       ; 0.2 (0.0)                                         ; 1.0 (0.0)                        ; 0.0 (0.0)            ; 43 (0)              ; 7 (7)                     ; 0 (0)         ; 589824            ; 72    ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated                          ; altsyncram_60u1 ; work         ;
+;                |decode_61a:rden_decode_b|    ; 5.7 (5.7)            ; 5.7 (5.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b ; decode_61a      ; work         ;
 ;                |decode_dla:decode2|          ; 3.7 (3.7)            ; 4.0 (4.0)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2       ; decode_dla      ; work         ;
-;                |mux_ufb:mux3|                ; 19.7 (19.7)          ; 20.3 (20.3)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|mux_ufb:mux3             ; mux_ufb         ; work         ;
-;    |XYRGBinput:u7|                           ; 9.5 (9.5)            ; 10.2 (10.2)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 23 (23)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|XYRGBinput:u7                                                                                                   ; XYRGBinput      ; work         ;
-;    |XYtoHEX:u6|                              ; 73.0 (73.0)          ; 73.3 (73.3)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 128 (128)           ; 90 (90)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|XYtoHEX:u6                                                                                                      ; XYtoHEX         ; work         ;
-;    |draw:u8|                                 ; 34.2 (34.2)          ; 36.8 (36.8)                      ; 2.7 (2.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 63 (63)             ; 55 (55)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|draw:u8                                                                                                         ; draw            ; work         ;
+;                |mux_ufb:mux3|                ; 20.3 (20.3)          ; 19.6 (19.6)                      ; 0.3 (0.3)                                         ; 1.0 (1.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|mux_ufb:mux3             ; mux_ufb         ; work         ;
+;    |XYRGBinput:u7|                           ; 9.0 (9.0)            ; 9.6 (9.6)                        ; 0.6 (0.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (9)               ; 23 (23)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|XYRGBinput:u7                                                                                                   ; XYRGBinput      ; work         ;
+;    |XYtoHEX:u6|                              ; 71.8 (71.8)          ; 73.0 (73.0)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 126 (126)           ; 90 (90)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|XYtoHEX:u6                                                                                                      ; XYtoHEX         ; work         ;
+;    |draw:u8|                                 ; 76.2 (76.2)          ; 77.3 (77.3)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 135 (135)           ; 55 (55)                   ; 0 (0)         ; 0                 ; 0     ; 4          ; 0    ; 0            ; |VGAtop|draw:u8                                                                                                         ; draw            ; work         ;
 ;    |pll:pll|                                 ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|pll:pll                                                                                                         ; pll             ; pll          ;
 ;       |pll_0002:pll_inst|                    ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|pll:pll|pll_0002:pll_inst                                                                                       ; pll_0002        ; pll          ;
 ;          |altera_pll:altera_pll_i|           ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGAtop|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i                                                               ; altera_pll      ; work         ;
@@ -1728,7 +1734,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[7]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[8]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[9]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[0]      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[0]      ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; CLK         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[3]      ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[1]      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
@@ -1780,78 +1786,95 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - XYRGBinput:u7|Yin[7]                                                             ; 1                 ; 0       ;
 ;      - LEDR[7]~output                                                                   ; 1                 ; 0       ;
 ; SW[8]                                                                                   ;                   ;         ;
-;      - XYRGBinput:u7|Yin[2]~0                                                           ; 1                 ; 0       ;
-;      - XYRGBinput:u7|Xin[1]~0                                                           ; 1                 ; 0       ;
+;      - XYRGBinput:u7|Yin[7]~0                                                           ; 1                 ; 0       ;
+;      - XYRGBinput:u7|Xin[0]~0                                                           ; 1                 ; 0       ;
 ;      - XYRGBinput:u7|RGBin[1]~1                                                         ; 1                 ; 0       ;
 ;      - LEDR[8]~output                                                                   ; 1                 ; 0       ;
 ; SW[9]                                                                                   ;                   ;         ;
-;      - XYRGBinput:u7|Yin[2]~0                                                           ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Xin[1]~0                                                           ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Yin[7]~0                                                           ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Xin[0]~0                                                           ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|RGBin[1]~1                                                         ; 0                 ; 0       ;
 ;      - LEDR[9]~output                                                                   ; 0                 ; 0       ;
 ; KEY[0]                                                                                  ;                   ;         ;
-;      - VGA_Ctrl:u9|H_Cont[1]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|H_Cont[4]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|H_Cont[8]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|H_Cont[9]                                                            ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[10]                                                           ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[0]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|H_Cont[1]                                                            ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[2]                                                            ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[3]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|H_Cont[4]                                                            ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[5]                                                            ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[6]                                                            ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[7]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|H_Cont[9]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|H_Cont[8]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[0]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[10]                                                           ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[9]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[8]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[7]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[6]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[5]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[1]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[4]                                                            ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[3]                                                            ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|V_Cont[2]                                                            ; 0                 ; 0       ;
-;      - draw:u8|cnt[18]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[21]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[22]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[23]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[2]                                                                   ; 0                 ; 0       ;
-;      - draw:u8|cnt[16]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[15]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[14]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[13]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[12]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[11]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[10]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[0]                                                                   ; 0                 ; 0       ;
-;      - draw:u8|cnt[1]                                                                   ; 0                 ; 0       ;
-;      - draw:u8|cnt[20]                                                                  ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[1]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[3]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[4]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[5]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[6]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[7]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[9]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[10]                                                           ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[8]                                                            ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[0]                                                            ; 0                 ; 0       ;
+;      - draw:u8|X[2]                                                                     ; 0                 ; 0       ;
+;      - XYRGBinput:u7|k0[0]                                                              ; 0                 ; 0       ;
+;      - draw:u8|X[0]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|Y[6]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|Y[5]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|Y[2]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|Y[7]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|X[1]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|X[3]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|X[4]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|Y[3]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|Y[4]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|X[5]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|X[6]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|X[7]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|Y[0]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|Y[1]                                                                     ; 0                 ; 0       ;
+;      - draw:u8|cnt[5]                                                                   ; 0                 ; 0       ;
 ;      - draw:u8|cnt[3]                                                                   ; 0                 ; 0       ;
 ;      - draw:u8|cnt[4]                                                                   ; 0                 ; 0       ;
-;      - draw:u8|cnt[5]                                                                   ; 0                 ; 0       ;
-;      - draw:u8|cnt[6]                                                                   ; 0                 ; 0       ;
+;      - draw:u8|cnt[2]                                                                   ; 0                 ; 0       ;
+;      - draw:u8|cnt[22]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[1]                                                                   ; 0                 ; 0       ;
+;      - draw:u8|cnt[0]                                                                   ; 0                 ; 0       ;
+;      - draw:u8|cnt[10]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[11]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[12]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[13]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[14]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[15]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[16]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[17]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[18]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[19]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[20]                                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[21]                                                                  ; 0                 ; 0       ;
 ;      - draw:u8|cnt[7]                                                                   ; 0                 ; 0       ;
 ;      - draw:u8|cnt[8]                                                                   ; 0                 ; 0       ;
 ;      - draw:u8|cnt[9]                                                                   ; 0                 ; 0       ;
-;      - draw:u8|cnt[17]                                                                  ; 0                 ; 0       ;
-;      - draw:u8|cnt[19]                                                                  ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Xin[1]                                                             ; 0                 ; 0       ;
+;      - draw:u8|cnt[6]                                                                   ; 0                 ; 0       ;
+;      - draw:u8|cnt[23]                                                                  ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Xin[0]                                                             ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Xin[2]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Xin[7]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Xin[6]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Xin[5]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Xin[4]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Xin[3]                                                             ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Xin[2]                                                             ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Xin[1]                                                             ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Yin[7]                                                             ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Yin[1]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Yin[2]                                                             ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Yin[6]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Yin[3]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Yin[4]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Yin[5]                                                             ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Yin[1]                                                             ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Yin[6]                                                             ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|Yin[0]                                                             ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Yin[7]                                                             ; 0                 ; 0       ;
 ;      - XYtoHEX:u6|Yi[1]                                                                 ; 0                 ; 0       ;
 ;      - XYtoHEX:u6|Xi[1]                                                                 ; 0                 ; 0       ;
 ;      - putpixel                                                                         ; 0                 ; 0       ;
@@ -1872,7 +1895,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - XYtoHEX:u6|HEX0[0]~0                                                             ; 0                 ; 0       ;
 ;      - XYtoHEX:u6|HEX3[0]~0                                                             ; 0                 ; 0       ;
 ;      - XYtoHEX:u6|DX0~0                                                                 ; 0                 ; 0       ;
-;      - XYtoHEX:u6|DX0[0]~1                                                              ; 0                 ; 0       ;
+;      - XYtoHEX:u6|DX0[1]~1                                                              ; 0                 ; 0       ;
 ;      - XYtoHEX:u6|DX0~2                                                                 ; 0                 ; 0       ;
 ;      - XYtoHEX:u6|DX0~3                                                                 ; 0                 ; 0       ;
 ;      - XYtoHEX:u6|DX0~4                                                                 ; 0                 ; 0       ;
@@ -1913,10 +1936,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - putcnt[1]                                                                        ; 0                 ; 0       ;
 ;      - putcnt[2]                                                                        ; 0                 ; 0       ;
 ;      - putcnt[3]                                                                        ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Yin[2]~0                                                           ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Yin[7]~0                                                           ; 0                 ; 0       ;
 ;      - draw:u8|state.000                                                                ; 0                 ; 0       ;
-;      - draw:u8|Y[2]~0                                                                   ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Xin[1]~0                                                           ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Xin[0]~0                                                           ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|RGBin~0                                                            ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|RGBin[1]~1                                                         ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|RGBin~2                                                            ; 0                 ; 0       ;
@@ -1925,29 +1947,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - XYRGBinput:u7|RGBin~5                                                            ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|RGBin~6                                                            ; 0                 ; 0       ;
 ;      - k3~0                                                                             ; 0                 ; 0       ;
-;      - XYRGBinput:u7|k0~0                                                               ; 0                 ; 0       ;
+;      - draw:u8|state~21                                                                 ; 0                 ; 0       ;
 ;      - draw:u8|state~22                                                                 ; 0                 ; 0       ;
 ;      - draw:u8|state~23                                                                 ; 0                 ; 0       ;
 ;      - draw:u8|state~24                                                                 ; 0                 ; 0       ;
 ;      - draw:u8|state~25                                                                 ; 0                 ; 0       ;
 ;      - draw:u8|state~26                                                                 ; 0                 ; 0       ;
 ;      - draw:u8|state~27                                                                 ; 0                 ; 0       ;
-;      - draw:u8|state~28                                                                 ; 0                 ; 0       ;
-;      - draw:u8|cnt[18]~0                                                                ; 0                 ; 0       ;
-;      - pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[4]~DUPLICATE                                                  ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[3]~DUPLICATE                                                  ; 0                 ; 0       ;
+;      - draw:u8|cnt[5]~1                                                                 ; 0                 ; 0       ;
+;      - pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL ; 1                 ; 0       ;
 ;      - VGA_Ctrl:u9|V_Cont[2]~DUPLICATE                                                  ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|V_Cont[10]~DUPLICATE                                                 ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[3]~DUPLICATE                                                  ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[4]~DUPLICATE                                                  ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|V_Cont[5]~DUPLICATE                                                  ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[6]~DUPLICATE                                                  ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[10]~DUPLICATE                                                 ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|V_Cont[7]~DUPLICATE                                                  ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[10]~DUPLICATE                                                 ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[9]~DUPLICATE                                                  ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|H_Cont[3]~DUPLICATE                                                  ; 0                 ; 0       ;
-;      - VGA_Ctrl:u9|H_Cont[4]~DUPLICATE                                                  ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[1]~DUPLICATE                                                  ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|H_Cont[2]~DUPLICATE                                                  ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|H_Cont[5]~DUPLICATE                                                  ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|H_Cont[7]~DUPLICATE                                                  ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|V_Cont[1]~DUPLICATE                                                  ; 0                 ; 0       ;
 ;      - VGA_Ctrl:u9|V_Cont[0]~DUPLICATE                                                  ; 0                 ; 0       ;
+;      - VGA_Ctrl:u9|oVGA_VS~DUPLICATE                                                    ; 0                 ; 0       ;
 ; CLK                                                                                     ;                   ;         ;
 ; KEY[3]                                                                                  ;                   ;         ;
 ;      - putpixel~1                                                                       ; 1                 ; 0       ;
@@ -1957,10 +1981,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - putcnt~2                                                                         ; 1                 ; 0       ;
 ;      - putcnt~3                                                                         ; 1                 ; 0       ;
 ; KEY[1]                                                                                  ;                   ;         ;
-;      - XYRGBinput:u7|Yin[2]~0                                                           ; 0                 ; 0       ;
-;      - XYRGBinput:u7|Xin[1]~0                                                           ; 0                 ; 0       ;
+;      - XYRGBinput:u7|k0[0]                                                              ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Yin[7]~0                                                           ; 0                 ; 0       ;
+;      - XYRGBinput:u7|Xin[0]~0                                                           ; 0                 ; 0       ;
 ;      - XYRGBinput:u7|RGBin[1]~1                                                         ; 0                 ; 0       ;
-;      - XYRGBinput:u7|k0~0                                                               ; 0                 ; 0       ;
 +-----------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1969,45 +1993,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------------+----------------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                             ; Location                   ; Fan-Out ; Usage                                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------------------------------------------------------------+----------------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
-; KEY[0]                                                                                                                           ; PIN_AJ4                    ; 158     ; Async. clear, Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|LessThan10~0                                                                                                         ; LABCELL_X36_Y6_N42         ; 18      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|LessThan9~1                                                                                                          ; LABCELL_X40_Y5_N48         ; 17      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|oVGA_HS                                                                                                              ; FF_X36_Y6_N53              ; 21      ; Clock                                   ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode731w[3]~0 ; LABCELL_X43_Y5_N42         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode749w[3]   ; LABCELL_X42_Y5_N21         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode760w[3]   ; LABCELL_X43_Y5_N30         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode771w[3]   ; LABCELL_X43_Y5_N48         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode782w[3]   ; LABCELL_X42_Y5_N18         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode793w[3]~0 ; LABCELL_X43_Y5_N54         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode804w[3]~0 ; LABCELL_X43_Y5_N57         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode815w[3]~0 ; LABCELL_X43_Y5_N12         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode643w[3]         ; LABCELL_X53_Y4_N33         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode660w[3]~0       ; LABCELL_X53_Y4_N12         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode670w[3]~0       ; LABCELL_X53_Y4_N39         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode680w[3]~0       ; LABCELL_X53_Y4_N30         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode690w[3]~0       ; LABCELL_X53_Y4_N15         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode700w[3]~0       ; LABCELL_X53_Y4_N42         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode710w[3]~0       ; LABCELL_X53_Y4_N45         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode720w[3]~0       ; LABCELL_X53_Y4_N36         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
-; XYRGBinput:u7|RGBin[1]~1                                                                                                         ; MLABCELL_X52_Y5_N42        ; 6       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYRGBinput:u7|Xin[1]~0                                                                                                           ; LABCELL_X55_Y5_N33         ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYRGBinput:u7|Yin[2]~0                                                                                                           ; LABCELL_X55_Y5_N57         ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|DX0[0]~1                                                                                                              ; LABCELL_X55_Y3_N27         ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|DX1[3]~1                                                                                                              ; LABCELL_X56_Y2_N39         ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|DX2[3]~1                                                                                                              ; LABCELL_X53_Y3_N24         ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|DY0[0]~1                                                                                                              ; LABCELL_X55_Y3_N15         ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|DY1[0]~1                                                                                                              ; LABCELL_X53_Y4_N3          ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|DY2[0]~1                                                                                                              ; MLABCELL_X52_Y4_N45        ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|HEX0[0]~0                                                                                                             ; LABCELL_X56_Y2_N9          ; 22      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|HEX3[0]~0                                                                                                             ; LABCELL_X64_Y2_N9          ; 22      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|STX.000                                                                                                               ; FF_X56_Y2_N8               ; 26      ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|STY.000                                                                                                               ; FF_X52_Y4_N2               ; 26      ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|Xi[2]~3                                                                                                               ; LABCELL_X56_Y2_N42         ; 5       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; XYtoHEX:u6|Yi[2]~3                                                                                                               ; LABCELL_X53_Y4_N24         ; 5       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; draw:u8|Y[2]~0                                                                                                                   ; LABCELL_X51_Y5_N48         ; 16      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
-; draw:u8|cnt[18]~0                                                                                                                ; LABCELL_X51_Y5_N51         ; 24      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; draw:u8|state.000                                                                                                                ; FF_X52_Y5_N14              ; 9       ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
-; draw:u8|state~23                                                                                                                 ; MLABCELL_X52_Y5_N6         ; 7       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; KEY[0]                                                                                                                           ; PIN_AJ4                    ; 176     ; Async. clear, Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|LessThan10~0                                                                                                         ; LABCELL_X36_Y6_N42         ; 20      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|LessThan9~1                                                                                                          ; LABCELL_X35_Y6_N42         ; 17      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|oVGA_HS                                                                                                              ; FF_X36_Y6_N53              ; 24      ; Clock                                   ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode731w[3]~0 ; LABCELL_X40_Y6_N6          ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode749w[3]   ; LABCELL_X40_Y6_N51         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode760w[3]   ; LABCELL_X40_Y6_N36         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode771w[3]   ; LABCELL_X40_Y6_N33         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode782w[3]   ; LABCELL_X40_Y6_N39         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode793w[3]~0 ; LABCELL_X40_Y6_N30         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode804w[3]~0 ; LABCELL_X40_Y6_N24         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b|w_anode815w[3]~0 ; LABCELL_X40_Y6_N42         ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode643w[3]         ; LABCELL_X53_Y2_N39         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode660w[3]~0       ; LABCELL_X53_Y2_N18         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode670w[3]~0       ; LABCELL_X53_Y2_N33         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode680w[3]~0       ; LABCELL_X53_Y2_N36         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode690w[3]~0       ; LABCELL_X53_Y2_N9          ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode700w[3]~0       ; LABCELL_X53_Y2_N12         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode710w[3]~0       ; LABCELL_X53_Y2_N15         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2|w_anode720w[3]~0       ; LABCELL_X53_Y2_N30         ; 9       ; Clock enable, Write enable              ; no     ; --                   ; --               ; --                        ;
+; XYRGBinput:u7|RGBin[1]~1                                                                                                         ; LABCELL_X50_Y5_N21         ; 6       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYRGBinput:u7|Xin[0]~0                                                                                                           ; LABCELL_X50_Y5_N33         ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYRGBinput:u7|Yin[7]~0                                                                                                           ; LABCELL_X50_Y5_N57         ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|DX0[1]~1                                                                                                              ; LABCELL_X53_Y5_N0          ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|DX1[3]~1                                                                                                              ; LABCELL_X53_Y5_N15         ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|DX2[3]~1                                                                                                              ; LABCELL_X53_Y5_N39         ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|DY0[0]~1                                                                                                              ; MLABCELL_X65_Y2_N21        ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|DY1[0]~1                                                                                                              ; LABCELL_X66_Y2_N12         ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|DY2[0]~1                                                                                                              ; LABCELL_X66_Y2_N33         ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|HEX0[0]~0                                                                                                             ; MLABCELL_X52_Y4_N6         ; 22      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|HEX3[0]~0                                                                                                             ; LABCELL_X66_Y2_N21         ; 22      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|STX.000                                                                                                               ; FF_X53_Y5_N20              ; 25      ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|STY.000                                                                                                               ; FF_X66_Y2_N38              ; 25      ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|Xi[2]~3                                                                                                               ; LABCELL_X53_Y5_N42         ; 5       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; XYtoHEX:u6|Yi[2]~3                                                                                                               ; LABCELL_X66_Y2_N0          ; 5       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; draw:u8|cnt[5]~1                                                                                                                 ; MLABCELL_X52_Y6_N0         ; 24      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; draw:u8|state.000                                                                                                                ; FF_X52_Y6_N35              ; 6       ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
+; draw:u8|state~22                                                                                                                 ; MLABCELL_X47_Y5_N48        ; 7       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
 ; pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]                                                                 ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 281     ; Clock                                   ; yes    ; Global Clock         ; GCLK7            ; --                        ;
 +----------------------------------------------------------------------------------------------------------------------------------+----------------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
 
@@ -2021,14 +2044,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
-+---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; Name                                                                                              ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size   ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF  ; Location                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
-+---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 65536        ; 9            ; 65536        ; 9            ; yes                    ; no                      ; yes                    ; yes                     ; 589824 ; 65536                       ; 9                           ; 65536                       ; 9                           ; 589824              ; 72          ; 0     ; None ; M10K_X41_Y13_N0, M10K_X49_Y10_N0, M10K_X41_Y10_N0, M10K_X41_Y16_N0, M10K_X49_Y12_N0, M10K_X38_Y15_N0, M10K_X58_Y7_N0, M10K_X38_Y16_N0, M10K_X41_Y11_N0, M10K_X49_Y11_N0, M10K_X58_Y9_N0, M10K_X41_Y17_N0, M10K_X41_Y9_N0, M10K_X41_Y8_N0, M10K_X58_Y8_N0, M10K_X49_Y14_N0, M10K_X41_Y12_N0, M10K_X49_Y8_N0, M10K_X26_Y14_N0, M10K_X38_Y9_N0, M10K_X38_Y10_N0, M10K_X38_Y12_N0, M10K_X58_Y6_N0, M10K_X41_Y14_N0, M10K_X41_Y6_N0, M10K_X49_Y4_N0, M10K_X58_Y5_N0, M10K_X49_Y7_N0, M10K_X49_Y1_N0, M10K_X58_Y4_N0, M10K_X49_Y2_N0, M10K_X41_Y2_N0, M10K_X26_Y10_N0, M10K_X38_Y11_N0, M10K_X49_Y5_N0, M10K_X49_Y17_N0, M10K_X26_Y13_N0, M10K_X49_Y13_N0, M10K_X26_Y11_N0, M10K_X38_Y14_N0, M10K_X41_Y5_N0, M10K_X41_Y3_N0, M10K_X26_Y4_N0, M10K_X41_Y4_N0, M10K_X38_Y1_N0, M10K_X26_Y3_N0, M10K_X38_Y4_N0, M10K_X26_Y2_N0, M10K_X38_Y17_N0, M10K_X38_Y7_N0, M10K_X26_Y8_N0, M10K_X38_Y13_N0, M10K_X26_Y6_N0, M10K_X41_Y15_N0, M10K_X14_Y6_N0, M10K_X26_Y9_N0, M10K_X26_Y12_N0, M10K_X38_Y3_N0, M10K_X26_Y5_N0, M10K_X49_Y9_N0, M10K_X49_Y6_N0, M10K_X26_Y7_N0, M10K_X14_Y9_N0, M10K_X41_Y7_N0, M10K_X14_Y8_N0, M10K_X38_Y8_N0, M10K_X38_Y2_N0, M10K_X38_Y5_N0, M10K_X41_Y1_N0, M10K_X49_Y3_N0, M10K_X14_Y7_N0, M10K_X38_Y6_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
-+---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
++---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
+; Name                                                                                              ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size   ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF  ; Location                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
++---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 65536        ; 9            ; 65536        ; 9            ; yes                    ; no                      ; yes                    ; yes                     ; 589824 ; 65536                       ; 9                           ; 65536                       ; 9                           ; 589824              ; 72          ; 0     ; None ; M10K_X49_Y6_N0, M10K_X49_Y4_N0, M10K_X49_Y5_N0, M10K_X41_Y1_N0, M10K_X38_Y2_N0, M10K_X14_Y6_N0, M10K_X26_Y5_N0, M10K_X41_Y3_N0, M10K_X49_Y8_N0, M10K_X38_Y8_N0, M10K_X41_Y14_N0, M10K_X41_Y10_N0, M10K_X26_Y14_N0, M10K_X38_Y14_N0, M10K_X26_Y11_N0, M10K_X49_Y15_N0, M10K_X14_Y7_N0, M10K_X14_Y4_N0, M10K_X26_Y6_N0, M10K_X58_Y4_N0, M10K_X41_Y4_N0, M10K_X38_Y5_N0, M10K_X26_Y3_N0, M10K_X49_Y3_N0, M10K_X38_Y9_N0, M10K_X26_Y8_N0, M10K_X26_Y1_N0, M10K_X26_Y4_N0, M10K_X49_Y2_N0, M10K_X26_Y9_N0, M10K_X41_Y5_N0, M10K_X41_Y7_N0, M10K_X38_Y11_N0, M10K_X38_Y7_N0, M10K_X38_Y13_N0, M10K_X49_Y1_N0, M10K_X26_Y10_N0, M10K_X41_Y13_N0, M10K_X49_Y11_N0, M10K_X49_Y13_N0, M10K_X14_Y8_N0, M10K_X38_Y4_N0, M10K_X49_Y14_N0, M10K_X38_Y6_N0, M10K_X26_Y13_N0, M10K_X38_Y15_N0, M10K_X58_Y10_N0, M10K_X38_Y3_N0, M10K_X14_Y10_N0, M10K_X14_Y9_N0, M10K_X58_Y6_N0, M10K_X58_Y7_N0, M10K_X41_Y12_N0, M10K_X38_Y12_N0, M10K_X58_Y9_N0, M10K_X49_Y10_N0, M10K_X26_Y12_N0, M10K_X26_Y7_N0, M10K_X38_Y1_N0, M10K_X41_Y2_N0, M10K_X26_Y2_N0, M10K_X41_Y11_N0, M10K_X58_Y3_N0, M10K_X41_Y6_N0, M10K_X41_Y8_N0, M10K_X58_Y5_N0, M10K_X58_Y8_N0, M10K_X38_Y10_N0, M10K_X49_Y9_N0, M10K_X49_Y7_N0, M10K_X49_Y12_N0, M10K_X41_Y9_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
++---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
+
+
++-----------------------------------------------+
+; Fitter DSP Block Usage Summary                ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 2           ;
+; Sum of two 18x18                ; 2           ;
+; Total number of DSP blocks      ; 4           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 6           ;
++---------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; DSP Block Details                                                                                                                                                                                                                                                                                                                                                                                            ;
++-------------------+-----------------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
+; Name              ; Mode                  ; Location      ; Sign Representation ; Data AX Input Register ; Data AY Input Register ; Data AZ Input Register ; Data BX Input Register ; Data BY Input Register ; Data BZ Input Register ; Output Register ; Dedicated Shift Register Chain ; Dedicated Pre-Adder ; Dedicated Coefficient Storage ; Dedicated Output Adder Chain ; Dedicated Output Accumulator ;
++-------------------+-----------------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
+; draw:u8|Mult0~128 ; Sum of two 18x18      ; DSP_X54_Y8_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; draw:u8|Mult0~469 ; Two Independent 18x18 ; DSP_X54_Y6_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; draw:u8|Mult1~12  ; Two Independent 18x18 ; DSP_X54_Y4_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; draw:u8|Mult1~405 ; Sum of two 18x18      ; DSP_X54_Y2_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
++-------------------+-----------------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -2036,14 +2084,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------------------------+---------------------------+
 ; Routing Resource Type                       ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Block interconnects                         ; 2,615 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 153 / 13,420 ( 1 % )      ;
-; C2 interconnects                            ; 841 / 119,108 ( < 1 % )   ;
-; C4 interconnects                            ; 514 / 56,300 ( < 1 % )    ;
+; Block interconnects                         ; 2,821 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 144 / 13,420 ( 1 % )      ;
+; C2 interconnects                            ; 1,007 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 563 / 56,300 ( 1 % )      ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )            ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )            ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )            ;
-; Direct links                                ; 52 / 289,320 ( < 1 % )    ;
+; Direct links                                ; 47 / 289,320 ( < 1 % )    ;
 ; Global clocks                               ; 1 / 16 ( 6 % )            ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )             ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )             ;
@@ -2099,12 +2147,12 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )             ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )            ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )            ;
-; Local interconnects                         ; 153 / 84,580 ( < 1 % )    ;
+; Local interconnects                         ; 174 / 84,580 ( < 1 % )    ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )            ;
-; R14 interconnects                           ; 348 / 12,676 ( 3 % )      ;
-; R14/C12 interconnect drivers                ; 371 / 20,720 ( 2 % )      ;
-; R3 interconnects                            ; 1,173 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 1,832 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 331 / 12,676 ( 3 % )      ;
+; R14/C12 interconnect drivers                ; 348 / 20,720 ( 2 % )      ;
+; R3 interconnects                            ; 1,346 / 130,992 ( 1 % )   ;
+; R6 interconnects                            ; 1,988 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 4 / 360 ( 1 % )           ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )        ;
 +---------------------------------------------+---------------------------+
@@ -2316,8 +2364,8 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------------------------------------------------+---------------------------------------------------------------------+-------------------+
 ; Source Clock(s)                                                     ; Destination Clock(s)                                                ; Delay Added in ns ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------+-------------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1761.3            ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 83.5              ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1732.5            ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 100.1             ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2328,106 +2376,106 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                                                                             ; Destination Register                                                                                                    ; Delay Added in ns ;
 +-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
-; VGA_Ctrl:u9|oVGA_HS                                                                                         ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 9.294             ;
-; VGA_Ctrl:u9|V_Cont[5]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 9.169             ;
-; VGA_Ctrl:u9|V_Cont[4]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 9.167             ;
-; VGA_Ctrl:u9|V_Cont[2]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 9.166             ;
-; VGA_Ctrl:u9|V_Cont[6]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 9.160             ;
-; VGA_Ctrl:u9|V_Cont[3]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 9.150             ;
-; VGA_Ctrl:u9|V_Cont[10]                                                                                      ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 9.123             ;
-; VGA_Ctrl:u9|V_Cont[8]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 9.113             ;
-; VGA_Ctrl:u9|V_Cont[9]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 9.016             ;
-; VGA_Ctrl:u9|V_Cont[1]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 8.993             ;
-; VGA_Ctrl:u9|V_Cont[7]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17~portb_address_reg0 ; 8.953             ;
-; VGA_Ctrl:u9|H_Cont[10]                                                                                      ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[9]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[8]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[5]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[4]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[3]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[2]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[1]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[0]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[7]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|H_Cont[6]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 4.647             ;
-; VGA_Ctrl:u9|V_Cont[0]                                                                                       ; VGA_Ctrl:u9|oVGA_VS                                                                                                     ; 1.189             ;
-; draw:u8|R[0]                                                                                                ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a71~porta_datain_reg0  ; 0.572             ;
-; XYRGBinput:u7|RGBin[7]                                                                                      ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a25~porta_datain_reg0  ; 0.553             ;
-; draw:u8|G[1]                                                                                                ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a58~porta_datain_reg0  ; 0.355             ;
-; XYtoHEX:u6|DY2[1]                                                                                           ; XYtoHEX:u6|DY2[3]                                                                                                       ; 0.349             ;
-; XYtoHEX:u6|DY1[1]                                                                                           ; XYtoHEX:u6|DY1[3]                                                                                                       ; 0.349             ;
+; VGA_Ctrl:u9|oVGA_HS                                                                                         ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 10.102            ;
+; VGA_Ctrl:u9|V_Cont[10]                                                                                      ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 9.174             ;
+; VGA_Ctrl:u9|V_Cont[3]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 9.149             ;
+; VGA_Ctrl:u9|V_Cont[5]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 9.133             ;
+; VGA_Ctrl:u9|V_Cont[6]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 9.109             ;
+; VGA_Ctrl:u9|V_Cont[9]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 9.093             ;
+; VGA_Ctrl:u9|V_Cont[8]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 9.076             ;
+; VGA_Ctrl:u9|V_Cont[7]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 8.997             ;
+; VGA_Ctrl:u9|V_Cont[1]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 8.992             ;
+; VGA_Ctrl:u9|V_Cont[4]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 8.953             ;
+; VGA_Ctrl:u9|V_Cont[2]                                                                                       ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a68~portb_address_reg0 ; 8.953             ;
+; VGA_Ctrl:u9|H_Cont[10]                                                                                      ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[8]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[9]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[5]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[4]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[3]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[2]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[1]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[0]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[7]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; VGA_Ctrl:u9|H_Cont[6]                                                                                       ; VGA_Ctrl:u9|oVGA_HS                                                                                                     ; 5.051             ;
+; XYtoHEX:u6|Yi[2]                                                                                            ; XYtoHEX:u6|Yi[7]                                                                                                        ; 2.525             ;
+; XYtoHEX:u6|Yi[3]                                                                                            ; XYtoHEX:u6|Yi[7]                                                                                                        ; 2.381             ;
+; XYtoHEX:u6|Xi[2]                                                                                            ; XYtoHEX:u6|Xi[7]                                                                                                        ; 2.220             ;
+; XYtoHEX:u6|Yi[5]                                                                                            ; XYtoHEX:u6|Yi[7]                                                                                                        ; 2.175             ;
+; XYtoHEX:u6|Xi[3]                                                                                            ; XYtoHEX:u6|Xi[7]                                                                                                        ; 2.053             ;
+; XYtoHEX:u6|Yi[7]                                                                                            ; XYtoHEX:u6|Yi[7]                                                                                                        ; 1.898             ;
+; XYtoHEX:u6|Yi[6]                                                                                            ; XYtoHEX:u6|Yi[7]                                                                                                        ; 1.898             ;
+; XYtoHEX:u6|Yi[4]                                                                                            ; XYtoHEX:u6|Yi[7]                                                                                                        ; 1.898             ;
+; XYtoHEX:u6|STX.000                                                                                          ; XYtoHEX:u6|Xi[7]                                                                                                        ; 1.794             ;
+; XYtoHEX:u6|STY.000                                                                                          ; XYtoHEX:u6|Yi[7]                                                                                                        ; 1.782             ;
+; XYtoHEX:u6|Xi[7]                                                                                            ; XYtoHEX:u6|Xi[7]                                                                                                        ; 1.768             ;
+; XYtoHEX:u6|Xi[6]                                                                                            ; XYtoHEX:u6|Xi[7]                                                                                                        ; 1.768             ;
+; XYtoHEX:u6|Xi[5]                                                                                            ; XYtoHEX:u6|Xi[7]                                                                                                        ; 1.768             ;
+; XYtoHEX:u6|Xi[4]                                                                                            ; XYtoHEX:u6|Xi[7]                                                                                                        ; 1.768             ;
+; XYtoHEX:u6|STX.001                                                                                          ; XYtoHEX:u6|Xi[7]                                                                                                        ; 1.085             ;
+; XYtoHEX:u6|STY.001                                                                                          ; XYtoHEX:u6|Yi[7]                                                                                                        ; 1.055             ;
+; draw:u8|cnt[8]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.854             ;
+; draw:u8|cnt[2]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.799             ;
+; draw:u8|cnt[4]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.776             ;
+; VGA_Ctrl:u9|V_Cont[0]                                                                                       ; VGA_Ctrl:u9|V_Cont[9]                                                                                                   ; 0.718             ;
+; draw:u8|cnt[5]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.709             ;
+; draw:u8|cnt[3]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.623             ;
+; draw:u8|cnt[6]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.619             ;
+; draw:u8|B[2]                                                                                                ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a29~porta_datain_reg0  ; 0.563             ;
+; draw:u8|B[0]                                                                                                ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a54~porta_datain_reg0  ; 0.539             ;
+; XYRGBinput:u7|RGBin[8]                                                                                      ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a35~porta_datain_reg0  ; 0.465             ;
+; XYtoHEX:u6|STY.010                                                                                          ; XYtoHEX:u6|Yi[1]                                                                                                        ; 0.395             ;
+; XYtoHEX:u6|DY2[2]                                                                                           ; XYtoHEX:u6|HEX5[1]                                                                                                      ; 0.374             ;
+; draw:u8|cnt[23]                                                                                             ; draw:u8|state.111                                                                                                       ; 0.369             ;
+; draw:u8|cnt[21]                                                                                             ; draw:u8|state.111                                                                                                       ; 0.369             ;
+; draw:u8|cnt[9]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.369             ;
+; draw:u8|cnt[7]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.369             ;
 ; XYtoHEX:u6|DX2[1]                                                                                           ; XYtoHEX:u6|DX2[3]                                                                                                       ; 0.349             ;
-; putcnt[0]                                                                                                   ; putcnt[2]                                                                                                               ; 0.349             ;
-; XYtoHEX:u6|DX1[1]                                                                                           ; XYtoHEX:u6|DX1[3]                                                                                                       ; 0.348             ;
-; draw:u8|state.011                                                                                           ; draw:u8|R[0]                                                                                                            ; 0.348             ;
-; draw:u8|state.001                                                                                           ; draw:u8|G[2]                                                                                                            ; 0.346             ;
-; XYtoHEX:u6|DX1[0]                                                                                           ; XYtoHEX:u6|DX1[3]                                                                                                       ; 0.345             ;
-; draw:u8|state.010                                                                                           ; draw:u8|R[0]                                                                                                            ; 0.345             ;
-; XYtoHEX:u6|DY2[0]                                                                                           ; XYtoHEX:u6|DY2[1]                                                                                                       ; 0.344             ;
-; XYtoHEX:u6|DY1[0]                                                                                           ; XYtoHEX:u6|DY1[3]                                                                                                       ; 0.344             ;
-; XYtoHEX:u6|DX2[0]                                                                                           ; XYtoHEX:u6|DX2[1]                                                                                                       ; 0.344             ;
-; putpixel                                                                                                    ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a25~porta_datain_reg0  ; 0.331             ;
-; XYtoHEX:u6|Xi[4]                                                                                            ; XYtoHEX:u6|Xi[4]                                                                                                        ; 0.331             ;
-; XYtoHEX:u6|Yi[4]                                                                                            ; XYtoHEX:u6|Yi[4]                                                                                                        ; 0.329             ;
-; XYtoHEX:u6|DY0[0]                                                                                           ; XYtoHEX:u6|HEX3[3]                                                                                                      ; 0.319             ;
-; draw:u8|state.000                                                                                           ; draw:u8|G[2]                                                                                                            ; 0.315             ;
-; k3                                                                                                          ; putcnt[3]                                                                                                               ; 0.314             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[0] ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.307             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[1] ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.307             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a15        ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.307             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a6         ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.307             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a33        ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.307             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a24        ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.307             ;
-; XYtoHEX:u6|Xi[3]                                                                                            ; XYtoHEX:u6|Xi[4]                                                                                                        ; 0.302             ;
-; XYtoHEX:u6|Xi[2]                                                                                            ; XYtoHEX:u6|Xi[3]                                                                                                        ; 0.302             ;
-; XYtoHEX:u6|DX1[2]                                                                                           ; XYtoHEX:u6|HEX1[6]                                                                                                      ; 0.299             ;
-; XYtoHEX:u6|DY2[2]                                                                                           ; XYtoHEX:u6|HEX5[6]                                                                                                      ; 0.298             ;
-; XYtoHEX:u6|DY1[2]                                                                                           ; XYtoHEX:u6|HEX4[6]                                                                                                      ; 0.298             ;
-; XYtoHEX:u6|DY0[2]                                                                                           ; XYtoHEX:u6|HEX3[3]                                                                                                      ; 0.298             ;
-; XYtoHEX:u6|DX2[2]                                                                                           ; XYtoHEX:u6|HEX2[6]                                                                                                      ; 0.298             ;
-; XYtoHEX:u6|Yi[3]                                                                                            ; XYtoHEX:u6|Yi[4]                                                                                                        ; 0.298             ;
-; XYtoHEX:u6|Yi[2]                                                                                            ; XYtoHEX:u6|Yi[3]                                                                                                        ; 0.293             ;
+; XYtoHEX:u6|DX1[1]                                                                                           ; XYtoHEX:u6|DX1[2]                                                                                                       ; 0.348             ;
+; putcnt[0]                                                                                                   ; putcnt[2]                                                                                                               ; 0.347             ;
+; XYtoHEX:u6|DY2[0]                                                                                           ; XYtoHEX:u6|DY2[3]                                                                                                       ; 0.345             ;
+; XYtoHEX:u6|DX1[0]                                                                                           ; XYtoHEX:u6|DX1[2]                                                                                                       ; 0.345             ;
+; XYtoHEX:u6|DX1[2]                                                                                           ; XYtoHEX:u6|HEX1[6]                                                                                                      ; 0.345             ;
+; XYtoHEX:u6|DY2[1]                                                                                           ; XYtoHEX:u6|DY2[3]                                                                                                       ; 0.343             ;
+; XYtoHEX:u6|DY1[1]                                                                                           ; XYtoHEX:u6|DY1[3]                                                                                                       ; 0.343             ;
+; XYtoHEX:u6|DY1[0]                                                                                           ; XYtoHEX:u6|DY1[1]                                                                                                       ; 0.340             ;
+; XYtoHEX:u6|DY1[2]                                                                                           ; XYtoHEX:u6|HEX4[6]                                                                                                      ; 0.340             ;
+; XYtoHEX:u6|DY0[2]                                                                                           ; XYtoHEX:u6|HEX3[0]                                                                                                      ; 0.340             ;
+; putpixel                                                                                                    ; putcnt[0]                                                                                                               ; 0.328             ;
+; draw:u8|cnt[22]                                                                                             ; draw:u8|state.111                                                                                                       ; 0.327             ;
+; draw:u8|cnt[1]                                                                                              ; draw:u8|state.111                                                                                                       ; 0.327             ;
+; XYtoHEX:u6|DY0[0]                                                                                           ; XYtoHEX:u6|HEX3[0]                                                                                                      ; 0.326             ;
+; XYtoHEX:u6|DX2[2]                                                                                           ; XYtoHEX:u6|HEX2[6]                                                                                                      ; 0.324             ;
+; XYtoHEX:u6|DX1[3]                                                                                           ; XYtoHEX:u6|HEX1[6]                                                                                                      ; 0.321             ;
+; XYtoHEX:u6|DX0[0]                                                                                           ; XYtoHEX:u6|HEX0[2]                                                                                                      ; 0.319             ;
+; XYtoHEX:u6|DY1[3]                                                                                           ; XYtoHEX:u6|HEX4[6]                                                                                                      ; 0.316             ;
+; XYtoHEX:u6|DY0[3]                                                                                           ; XYtoHEX:u6|HEX3[0]                                                                                                      ; 0.316             ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[2] ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.315             ;
+; draw:u8|state.010                                                                                           ; draw:u8|R[0]                                                                                                            ; 0.314             ;
+; draw:u8|state.110                                                                                           ; draw:u8|state.111                                                                                                       ; 0.309             ;
+; k3                                                                                                          ; putcnt[3]                                                                                                               ; 0.301             ;
+; XYtoHEX:u6|DX2[3]                                                                                           ; XYtoHEX:u6|HEX2[6]                                                                                                      ; 0.300             ;
+; XYtoHEX:u6|DX0[2]                                                                                           ; XYtoHEX:u6|HEX0[6]                                                                                                      ; 0.298             ;
+; XYtoHEX:u6|DY0[1]                                                                                           ; XYtoHEX:u6|HEX3[0]                                                                                                      ; 0.296             ;
+; XYtoHEX:u6|DY2[3]                                                                                           ; XYtoHEX:u6|HEX5[1]                                                                                                      ; 0.295             ;
+; draw:u8|state.100                                                                                           ; draw:u8|R[0]                                                                                                            ; 0.293             ;
+; XYtoHEX:u6|STY.011                                                                                          ; XYtoHEX:u6|STY.000                                                                                                      ; 0.293             ;
 ; XYtoHEX:u6|STX.011                                                                                          ; XYtoHEX:u6|STX.000                                                                                                      ; 0.293             ;
-; XYtoHEX:u6|DY0[1]                                                                                           ; XYtoHEX:u6|HEX3[3]                                                                                                      ; 0.292             ;
-; XYtoHEX:u6|STY.011                                                                                          ; XYtoHEX:u6|STY.000                                                                                                      ; 0.290             ;
-; XYtoHEX:u6|DY2[3]                                                                                           ; XYtoHEX:u6|HEX5[6]                                                                                                      ; 0.280             ;
-; XYtoHEX:u6|DY1[3]                                                                                           ; XYtoHEX:u6|HEX4[6]                                                                                                      ; 0.280             ;
-; XYtoHEX:u6|DY0[3]                                                                                           ; XYtoHEX:u6|HEX3[3]                                                                                                      ; 0.280             ;
-; XYtoHEX:u6|DX2[3]                                                                                           ; XYtoHEX:u6|HEX2[6]                                                                                                      ; 0.280             ;
-; XYtoHEX:u6|STX.000                                                                                          ; XYtoHEX:u6|DX1[3]                                                                                                       ; 0.279             ;
-; XYtoHEX:u6|DX1[3]                                                                                           ; XYtoHEX:u6|HEX1[6]                                                                                                      ; 0.279             ;
-; XYtoHEX:u6|Xi[1]                                                                                            ; XYtoHEX:u6|DX0[1]                                                                                                       ; 0.274             ;
-; draw:u8|state.101                                                                                           ; draw:u8|state.110                                                                                                       ; 0.265             ;
-; XYtoHEX:u6|STX.010                                                                                          ; XYtoHEX:u6|STX.011                                                                                                      ; 0.264             ;
-; putcnt[1]                                                                                                   ; putcnt[2]                                                                                                               ; 0.262             ;
-; XYRGBinput:u7|RGBin[4]                                                                                      ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a58~porta_datain_reg0  ; 0.260             ;
-; XYRGBinput:u7|RGBin[8]                                                                                      ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a71~porta_datain_reg0  ; 0.259             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[2] ; VGA_Ctrl:u9|vramR[8]                                                                                                    ; 0.243             ;
-; draw:u8|state.100                                                                                           ; draw:u8|G[2]                                                                                                            ; 0.238             ;
-; VGA_Ctrl:u9|oVGA_VS                                                                                         ; VGA_Ctrl:u9|oVGA_VS                                                                                                     ; 0.222             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a17        ; VGA_Ctrl:u9|vramR[8]                                                                                                    ; 0.214             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a8         ; VGA_Ctrl:u9|vramR[8]                                                                                                    ; 0.214             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a35        ; VGA_Ctrl:u9|vramR[8]                                                                                                    ; 0.214             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a26        ; VGA_Ctrl:u9|vramR[8]                                                                                                    ; 0.214             ;
-; XYtoHEX:u6|Xi[6]                                                                                            ; XYtoHEX:u6|Xi[6]                                                                                                        ; 0.196             ;
-; XYtoHEX:u6|Xi[5]                                                                                            ; XYtoHEX:u6|Xi[6]                                                                                                        ; 0.196             ;
-; XYtoHEX:u6|Yi[6]                                                                                            ; XYtoHEX:u6|Yi[6]                                                                                                        ; 0.187             ;
-; XYtoHEX:u6|Yi[5]                                                                                            ; XYtoHEX:u6|Yi[6]                                                                                                        ; 0.187             ;
-; putcnt[2]                                                                                                   ; putcnt[3]                                                                                                               ; 0.183             ;
-; draw:u8|state.111                                                                                           ; draw:u8|R[0]                                                                                                            ; 0.157             ;
-; draw:u8|state.110                                                                                           ; draw:u8|R[0]                                                                                                            ; 0.157             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a69        ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.150             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a60        ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.150             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a51        ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.150             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a42        ; VGA_Ctrl:u9|vramR[6]                                                                                                    ; 0.150             ;
-; XYtoHEX:u6|Yi[7]                                                                                            ; XYtoHEX:u6|Yi[7]                                                                                                        ; 0.147             ;
-; XYtoHEX:u6|STY.001                                                                                          ; XYtoHEX:u6|Yi[7]                                                                                                        ; 0.147             ;
-; XYtoHEX:u6|STY.010                                                                                          ; XYtoHEX:u6|Yi[7]                                                                                                        ; 0.147             ;
-; XYtoHEX:u6|Yi[1]                                                                                            ; XYtoHEX:u6|Yi[7]                                                                                                        ; 0.147             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a70        ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.120             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a61        ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.120             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a52        ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.120             ;
-; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a43        ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.120             ;
+; XYtoHEX:u6|DX0[1]                                                                                           ; XYtoHEX:u6|HEX0[6]                                                                                                      ; 0.292             ;
+; XYtoHEX:u6|DX0[3]                                                                                           ; XYtoHEX:u6|HEX0[6]                                                                                                      ; 0.280             ;
+; XYRGBinput:u7|Xin[6]                                                                                        ; XYtoHEX:u6|Xi[6]                                                                                                        ; 0.280             ;
+; XYRGBinput:u7|RGBin[2]                                                                                      ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a29~porta_datain_reg0  ; 0.275             ;
+; XYtoHEX:u6|Xi[0]                                                                                            ; XYtoHEX:u6|DX0[0]                                                                                                       ; 0.265             ;
+; XYtoHEX:u6|STX.010                                                                                          ; XYtoHEX:u6|STX.011                                                                                                      ; 0.265             ;
+; putcnt[1]                                                                                                   ; putcnt[2]                                                                                                               ; 0.259             ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[0] ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.209             ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|out_address_reg_b[1] ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.209             ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a16        ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.209             ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a7         ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.209             ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a34        ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.209             ;
+; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ram_block1a25        ; VGA_Ctrl:u9|vramR[7]                                                                                                    ; 0.209             ;
+; XYtoHEX:u6|Xi[1]                                                                                            ; XYtoHEX:u6|Xi[7]                                                                                                        ; 0.202             ;
+; XYRGBinput:u7|Xin[7]                                                                                        ; XYtoHEX:u6|Xi[7]                                                                                                        ; 0.202             ;
 +-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
@@ -2471,20 +2519,20 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 11% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
+    Info (170196): Router estimated peak interconnect usage is 12% of the available device resources in the region that extends from location X45_Y0 to location X55_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:23
-Info (11888): Total time spent on timing analysis during the Fitter is 1.55 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:24
+Info (11888): Total time spent on timing analysis during the Fitter is 1.80 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:46
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:37
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 2125 megabytes
-    Info: Processing ended: Tue Oct  7 13:51:36 2025
-    Info: Elapsed time: 00:01:41
-    Info: Total CPU time (on all processors): 00:01:36
+    Info: Peak virtual memory: 2141 megabytes
+    Info: Processing ended: Tue Oct  7 14:56:47 2025
+    Info: Elapsed time: 00:02:19
+    Info: Total CPU time (on all processors): 00:01:41
 
 

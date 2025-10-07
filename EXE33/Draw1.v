@@ -24,7 +24,7 @@ module draw (
   reg [7:0] X, Y;
   reg [2:0] R, G, B;
   reg  [ 2:0] state;
-  reg  [ 3:0] state2;
+  reg  [ 4:0] state2;
   reg  [23:0] cnt;
   wire [15:0] addr;
   reg [8:0] SW1, SW2;
@@ -99,7 +99,7 @@ module draw (
           9: begin
             CX   <= SW1[8:4];
             CY   <= SW1[3:0];
-            CHAR <= 'h64;  //T
+            CHAR <= 'h54;  //T
           end
           10: begin
             CX   <= CX + 1;
@@ -123,15 +123,15 @@ module draw (
           end
           15: begin
             CX   <= CX + 1;
-            CHAR <= 'h5f;  //O
+            CHAR <= 'h4f;  //O
           end
           16: begin
             CX   <= CX + 1;
-            CHAR <= 'h64;  //T
+            CHAR <= 'h54;  //T
           end
           17: begin
             CX <= CX + 1;
-            CHAR <= 'h51;  //A
+            CHAR <= 'h41;  //A
             state2flag <= 0;
           end
         endcase

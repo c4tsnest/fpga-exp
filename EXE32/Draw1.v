@@ -78,10 +78,16 @@ module draw (
         G <= addr[15:13];
         B <= addr[7:5];
       end else if (state == 7) begin
-        {Y, X} <= 0;
-        R <= 0;
-        G <= 0;
-        B <= 0;
+        {Y, X} <= addr;
+	if ((X-20)*(X-20)+(Y-20)*(Y-20) < 100) begin
+		R <= 0;
+		G <= 3;
+		B <= 3;
+	end else begin
+		R <= 0;
+		G <= 0;
+		B <= 0;
+	end
       end
     end
   end

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGAtop
-Tue Oct  7 13:49:55 2025
+Tue Oct  7 14:54:27 2025
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -14,25 +14,26 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |VGAtop|draw:u8|state
- 11. State Machine - |VGAtop|XYtoHEX:u6|STY
- 12. State Machine - |VGAtop|XYtoHEX:u6|STX
- 13. Registers Removed During Synthesis
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated
- 18. Parameter Settings for User Entity Instance: pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i
- 19. Parameter Settings for User Entity Instance: VGA_Ctrl:u9
- 20. Parameter Settings for User Entity Instance: VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component
- 21. altsyncram Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "VGA_Ctrl:u9|vram64k:u10"
- 23. Port Connectivity Checks: "VGA_Ctrl:u9"
- 24. Port Connectivity Checks: "pll:pll"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Analysis & Synthesis IP Cores Summary
+ 11. State Machine - |VGAtop|draw:u8|state
+ 12. State Machine - |VGAtop|XYtoHEX:u6|STY
+ 13. State Machine - |VGAtop|XYtoHEX:u6|STX
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated
+ 19. Parameter Settings for User Entity Instance: pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i
+ 20. Parameter Settings for User Entity Instance: VGA_Ctrl:u9
+ 21. Parameter Settings for User Entity Instance: VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "VGA_Ctrl:u9|vram64k:u10"
+ 24. Port Connectivity Checks: "VGA_Ctrl:u9"
+ 25. Port Connectivity Checks: "pll:pll"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -59,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct  7 13:49:55 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct  7 14:54:27 2025       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; VGAtop                                      ;
 ; Top-level Entity Name           ; VGAtop                                      ;
@@ -69,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Total pins                      ; 96                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 589,824                                     ;
-; Total DSP Blocks                ; 0                                           ;
+; Total DSP Blocks                ; 4                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -180,7 +181,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -218,14 +220,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                            ;
 +---------------------------------------------+------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 214                                                              ;
+; Estimate of Logic utilization (ALMs needed) ; 256                                                              ;
 ;                                             ;                                                                  ;
-; Combinational ALUT usage for logic          ; 360                                                              ;
+; Combinational ALUT usage for logic          ; 429                                                              ;
 ;     -- 7 input functions                    ; 2                                                                ;
-;     -- 6 input functions                    ; 63                                                               ;
-;     -- 5 input functions                    ; 36                                                               ;
-;     -- 4 input functions                    ; 74                                                               ;
-;     -- <=3 input functions                  ; 185                                                              ;
+;     -- 6 input functions                    ; 77                                                               ;
+;     -- 5 input functions                    ; 40                                                               ;
+;     -- 4 input functions                    ; 76                                                               ;
+;     -- <=3 input functions                  ; 234                                                              ;
 ;                                             ;                                                                  ;
 ; Dedicated logic registers                   ; 213                                                              ;
 ;                                             ;                                                                  ;
@@ -233,15 +235,15 @@ https://fpgasoftware.intel.com/eula.
 ; Total MLAB memory bits                      ; 0                                                                ;
 ; Total block memory bits                     ; 589824                                                           ;
 ;                                             ;                                                                  ;
-; Total DSP Blocks                            ; 0                                                                ;
+; Total DSP Blocks                            ; 4                                                                ;
 ;                                             ;                                                                  ;
 ; Total PLLs                                  ; 1                                                                ;
 ;     -- PLLs                                 ; 1                                                                ;
 ;                                             ;                                                                  ;
 ; Maximum fan-out node                        ; pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 275                                                              ;
-; Total fan-out                               ; 4298                                                             ;
-; Average fan-out                             ; 5.13                                                             ;
+; Total fan-out                               ; 4607                                                             ;
+; Average fan-out                             ; 5.06                                                             ;
 +---------------------------------------------+------------------------------------------------------------------+
 
 
@@ -250,7 +252,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |VGAtop                                      ; 360 (32)            ; 213 (6)                   ; 589824            ; 0          ; 96   ; 0            ; |VGAtop                                                                                                                 ; VGAtop          ; work         ;
+; |VGAtop                                      ; 429 (32)            ; 213 (6)                   ; 589824            ; 4          ; 96   ; 0            ; |VGAtop                                                                                                                 ; VGAtop          ; work         ;
 ;    |VGA_Ctrl:u9|                             ; 127 (84)            ; 39 (33)                   ; 589824            ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9                                                                                                     ; VGA_Ctrl        ; work         ;
 ;       |vram64k:u10|                          ; 43 (0)              ; 6 (0)                     ; 589824            ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10                                                                                         ; vram64k         ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 43 (0)              ; 6 (0)                     ; 589824            ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component                                                         ; altsyncram      ; work         ;
@@ -258,9 +260,9 @@ https://fpgasoftware.intel.com/eula.
 ;                |decode_61a:rden_decode_b|    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_61a:rden_decode_b ; decode_61a      ; work         ;
 ;                |decode_dla:decode2|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|decode_dla:decode2       ; decode_dla      ; work         ;
 ;                |mux_ufb:mux3|                ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|mux_ufb:mux3             ; mux_ufb         ; work         ;
-;    |XYRGBinput:u7|                           ; 10 (10)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|XYRGBinput:u7                                                                                                   ; XYRGBinput      ; work         ;
-;    |XYtoHEX:u6|                              ; 128 (128)           ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|XYtoHEX:u6                                                                                                      ; XYtoHEX         ; work         ;
-;    |draw:u8|                                 ; 63 (63)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|draw:u8                                                                                                         ; draw            ; work         ;
+;    |XYRGBinput:u7|                           ; 9 (9)               ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|XYRGBinput:u7                                                                                                   ; XYRGBinput      ; work         ;
+;    |XYtoHEX:u6|                              ; 126 (126)           ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|XYtoHEX:u6                                                                                                      ; XYtoHEX         ; work         ;
+;    |draw:u8|                                 ; 135 (135)           ; 55 (55)                   ; 0                 ; 4          ; 0    ; 0            ; |VGAtop|draw:u8                                                                                                         ; draw            ; work         ;
 ;    |pll:pll|                                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|pll:pll                                                                                                         ; pll             ; pll          ;
 ;       |pll_0002:pll_inst|                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|pll:pll|pll_0002:pll_inst                                                                                       ; pll_0002        ; pll          ;
 ;          |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAtop|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i                                                               ; altera_pll      ; work         ;
@@ -275,6 +277,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
 ; VGA_Ctrl:u9|vram64k:u10|altsyncram:altsyncram_component|altsyncram_60u1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 65536        ; 9            ; 65536        ; 9            ; 589824 ; None ;
 +---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 2           ;
+; Sum of two 18x18                ; 2           ;
+; Total number of DSP blocks      ; 4           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 6           ;
++---------------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -357,7 +372,7 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 213   ;
-; Number of registers using Synchronous Clear  ; 91    ;
+; Number of registers using Synchronous Clear  ; 92    ;
 ; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 24    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -382,12 +397,11 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |VGAtop|draw:u8|cnt[18]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |VGAtop|XYRGBinput:u7|Xin[1]   ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |VGAtop|draw:u8|cnt[5]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |VGAtop|XYRGBinput:u7|Xin[0]   ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |VGAtop|XYRGBinput:u7|RGBin[1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |VGAtop|XYRGBinput:u7|Yin[2]   ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |VGAtop|draw:u8|Y[2]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGAtop|XYtoHEX:u6|DX0[0]      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |VGAtop|XYRGBinput:u7|Yin[7]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGAtop|XYtoHEX:u6|DX0[1]      ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGAtop|XYtoHEX:u6|DX1[3]      ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGAtop|XYtoHEX:u6|DX2[3]      ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGAtop|XYtoHEX:u6|DY0[0]      ;
@@ -396,7 +410,8 @@ Encoding Type:  One-Hot
 ; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |VGAtop|XYtoHEX:u6|Yi[3]       ;
 ; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |VGAtop|XYtoHEX:u6|Xi[6]       ;
 ; 8:1                ; 9 bits    ; 45 LEs        ; 45 LEs               ; 0 LEs                  ; Yes        ; |VGAtop|VGA_Ctrl:u9|vramR[0]   ;
-; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |VGAtop|draw:u8|B[1]           ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |VGAtop|draw:u8|B[2]           ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |VGAtop|draw:u8|B[1]           ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |VGAtop|XYtoHEX:u6|STY         ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |VGAtop|XYtoHEX:u6|STX         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
@@ -800,30 +815,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 95                          ;
 ;     ENA SCLR          ; 40                          ;
 ;     ENA SLD           ; 2                           ;
-;     SCLR              ; 28                          ;
+;     SCLR              ; 29                          ;
 ;     SCLR SLD          ; 1                           ;
-;     plain             ; 23                          ;
-; arriav_lcell_comb     ; 365                         ;
-;     arith             ; 97                          ;
+;     plain             ; 22                          ;
+; arriav_lcell_comb     ; 434                         ;
+;     arith             ; 129                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 94                          ;
-;         2 data inputs ; 1                           ;
+;         2 data inputs ; 33                          ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 266                         ;
+;     normal            ; 289                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 62                          ;
-;         4 data inputs ; 74                          ;
-;         5 data inputs ; 36                          ;
-;         6 data inputs ; 63                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 66                          ;
+;         4 data inputs ; 76                          ;
+;         5 data inputs ; 40                          ;
+;         6 data inputs ; 77                          ;
+;     shared            ; 14                          ;
+;         3 data inputs ; 14                          ;
+; arriav_mac            ; 4                           ;
 ; boundary_port         ; 96                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 72                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.80                        ;
-; Average LUT depth     ; 1.93                        ;
+; Max LUT depth         ; 6.10                        ;
+; Average LUT depth     ; 2.64                        ;
 +-----------------------+-----------------------------+
 
 
@@ -842,7 +860,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue Oct  7 13:49:19 2025
+    Info: Processing started: Tue Oct  7 14:53:42 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGAtop -c VGAtop
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1032,16 +1050,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 7 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/sysele2503/exp/EXE32/VGAtop_pll.v Line: 9
-Info (21057): Implemented 557 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 633 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 388 logic cells
+    Info (21061): Implemented 460 logic cells
     Info (21064): Implemented 72 RAM segments
     Info (21065): Implemented 1 PLLs
+    Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
-    Info: Peak virtual memory: 664 megabytes
-    Info: Processing ended: Tue Oct  7 13:49:55 2025
-    Info: Elapsed time: 00:00:36
+    Info: Peak virtual memory: 654 megabytes
+    Info: Processing ended: Tue Oct  7 14:54:27 2025
+    Info: Elapsed time: 00:00:45
     Info: Total CPU time (on all processors): 00:00:17
 
 
