@@ -90,16 +90,16 @@ module draw (
           end
           7: begin
             CX   <= CX + 1;
-            CHAR <= 'h64;  //T
+            CHAR <= 'h20;
           end
           8: begin
-            CX   <= SW1[8:4];
-            CY   <= SW1[3:0];
-            CHAR <= 'h6f;  //o
+            CX   <= CX + 1;
+            CHAR <= 'h20;
           end
           9: begin
-            CX   <= CX + 1;
-            CHAR <= 'h6d;  //m
+            CX   <= SW1[8:4];
+            CY   <= SW1[3:0];
+            CHAR <= 'h64;  //T
           end
           10: begin
             CX   <= CX + 1;
@@ -107,21 +107,29 @@ module draw (
           end
           11: begin
             CX   <= CX + 1;
-            CHAR <= 'h79;  //y
+            CHAR <= 'h6d;  //m
           end
           12: begin
             CX   <= CX + 1;
-            CHAR <= 'h61;  //a
+            CHAR <= 'h6f;  //o
           end
           13: begin
             CX   <= CX + 1;
-            CHAR <= 'h5f;  //O
+            CHAR <= 'h79;  //y
           end
           14: begin
             CX   <= CX + 1;
-            CHAR <= 'h64;  //T
+            CHAR <= 'h61;  //a
           end
           15: begin
+            CX   <= CX + 1;
+            CHAR <= 'h5f;  //O
+          end
+          16: begin
+            CX   <= CX + 1;
+            CHAR <= 'h64;  //T
+          end
+          17: begin
             CX <= CX + 1;
             CHAR <= 'h51;  //A
             state2flag <= 0;
