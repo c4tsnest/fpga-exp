@@ -71,7 +71,7 @@ module draw (
         G <= 8'hFF;
         B <= 8'h0;
       end else if (state == 6) begin
-        if (cnt == 24'hFFFFFF) state <= 7;
+        if (cnt == 24'hFFFFFF) state <= 6;
         cnt <= cnt + 1;
         {Y, X} <= addr;
         R <= 8'h0;

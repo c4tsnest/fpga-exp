@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Oct  7 13:19:06 2025
+Fitter Status : Successful - Tue Oct  7 13:36:20 2025
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : VGAtop
 Top-level Entity Name : VGAtop
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 112 / 41,910 ( < 1 % )
-Total registers : 109
+Logic utilization (in ALMs) : 113 / 41,910 ( < 1 % )
+Total registers : 106
 Total pins : 96 / 499 ( 19 % )
 Total virtual pins : 0
 Total block memory bits : 589,824 / 5,662,720 ( 10 % )

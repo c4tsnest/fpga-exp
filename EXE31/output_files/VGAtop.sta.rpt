@@ -1,5 +1,5 @@
 Timing Analyzer report for VGAtop
-Tue Oct  7 13:20:15 2025
+Tue Oct  7 13:38:09 2025
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -100,14 +100,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.52        ;
+; Average used               ; 1.53        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  17.4%      ;
-;     Processor 3            ;  17.1%      ;
-;     Processor 4            ;  17.0%      ;
+;     Processor 2            ;  17.8%      ;
+;     Processor 3            ;  17.6%      ;
+;     Processor 4            ;  17.4%      ;
 +----------------------------+-------------+
 
 
@@ -128,8 +128,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+---------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                          ; Note ;
 +------------+-----------------+---------------------------------------------------------------------+------+
-; 104.54 MHz ; 104.54 MHz      ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 192.09 MHz ; 192.09 MHz      ; VGA_Ctrl:u9|oVGA_HS                                                 ;      ;
+; 121.62 MHz ; 121.62 MHz      ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 200.56 MHz ; 200.56 MHz      ; VGA_Ctrl:u9|oVGA_HS                                                 ;      ;
 +------------+-----------------+---------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -145,8 +145,8 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -7.638 ; -4111.900     ;
-; VGA_Ctrl:u9|oVGA_HS                                                 ; -4.206 ; -46.173       ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -7.445 ; -3874.202     ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; -3.986 ; -45.679       ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -155,8 +155,8 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------+-------+---------------+
 ; Clock                                                               ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------+-------+---------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.227 ; 0.000         ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.376 ; 0.000         ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.291 ; 0.000         ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.378 ; 0.000         ;
 +---------------------------------------------------------------------+-------+---------------+
 
 
@@ -177,10 +177,10 @@ No paths to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; -0.394 ; -11.009       ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; -0.394 ; -11.240       ;
 ; pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.562  ; 0.000         ;
 ; CLK                                                                 ; 9.900  ; 0.000         ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.277 ; 0.000         ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.271 ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -195,8 +195,8 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                          ; Note ;
 +------------+-----------------+---------------------------------------------------------------------+------+
-; 108.01 MHz ; 108.01 MHz      ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 196.31 MHz ; 196.31 MHz      ; VGA_Ctrl:u9|oVGA_HS                                                 ;      ;
+; 125.42 MHz ; 125.42 MHz      ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 209.12 MHz ; 209.12 MHz      ; VGA_Ctrl:u9|oVGA_HS                                                 ;      ;
 +------------+-----------------+---------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -206,8 +206,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.940 ; -3722.818     ;
-; VGA_Ctrl:u9|oVGA_HS                                                 ; -4.094 ; -45.079       ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.828 ; -3511.406     ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; -3.782 ; -45.395       ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -216,8 +216,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------+-------+---------------+
 ; Clock                                                               ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------+-------+---------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.272 ; 0.000         ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.376 ; 0.000         ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.348 ; 0.000         ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.378 ; 0.000         ;
 +---------------------------------------------------------------------+-------+---------------+
 
 
@@ -238,10 +238,10 @@ No paths to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; -0.394 ; -10.826       ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; -0.394 ; -10.275       ;
 ; pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.562  ; 0.000         ;
 ; CLK                                                                 ; 9.926  ; 0.000         ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.253 ; 0.000         ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.247 ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -256,8 +256,8 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.991 ; -3110.450     ;
-; VGA_Ctrl:u9|oVGA_HS                                                 ; -2.378 ; -20.732       ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.628 ; -2957.999     ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; -2.254 ; -19.990       ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -266,8 +266,8 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+-------+---------------+
 ; Clock                                                               ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------+-------+---------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.116 ; 0.000         ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.204 ; 0.000         ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.127 ; 0.000         ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.183 ; 0.000         ;
 +---------------------------------------------------------------------+-------+---------------+
 
 
@@ -288,10 +288,10 @@ No paths to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.149  ; 0.000         ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.152  ; 0.000         ;
 ; pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.562  ; 0.000         ;
 ; CLK                                                                 ; 9.643  ; 0.000         ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.389 ; 0.000         ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.390 ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -306,8 +306,8 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -4.785 ; -2493.981     ;
-; VGA_Ctrl:u9|oVGA_HS                                                 ; -2.037 ; -17.559       ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -4.523 ; -2355.912     ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; -1.930 ; -17.277       ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -316,8 +316,8 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+-------+---------------+
 ; Clock                                                               ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------+-------+---------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.111 ; 0.000         ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.190 ; 0.000         ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.126 ; 0.000         ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.173 ; 0.000         ;
 +---------------------------------------------------------------------+-------+---------------+
 
 
@@ -338,10 +338,10 @@ No paths to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.134  ; 0.000         ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; 0.148  ; 0.000         ;
 ; pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.562  ; 0.000         ;
 ; CLK                                                                 ; 9.632  ; 0.000         ;
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.386 ; 0.000         ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.388 ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -356,16 +356,16 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
 ; Clock                                                                ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                     ; -7.638    ; 0.111 ; N/A      ; N/A     ; -0.394              ;
+; Worst-case Slack                                                     ; -7.445    ; 0.126 ; N/A      ; N/A     ; -0.394              ;
 ;  CLK                                                                 ; N/A       ; N/A   ; N/A      ; N/A     ; 9.632               ;
-;  VGA_Ctrl:u9|oVGA_HS                                                 ; -4.206    ; 0.111 ; N/A      ; N/A     ; -0.394              ;
+;  VGA_Ctrl:u9|oVGA_HS                                                 ; -3.986    ; 0.126 ; N/A      ; N/A     ; -0.394              ;
 ;  pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A   ; N/A      ; N/A     ; 1.562               ;
-;  pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -7.638    ; 0.190 ; N/A      ; N/A     ; 11.253              ;
-; Design-wide TNS                                                      ; -4158.073 ; 0.0   ; 0.0      ; 0.0     ; -11.009             ;
+;  pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -7.445    ; 0.173 ; N/A      ; N/A     ; 11.247              ;
+; Design-wide TNS                                                      ; -3919.881 ; 0.0   ; 0.0      ; 0.0     ; -11.24              ;
 ;  CLK                                                                 ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  VGA_Ctrl:u9|oVGA_HS                                                 ; -46.173   ; 0.000 ; N/A      ; N/A     ; -11.009             ;
+;  VGA_Ctrl:u9|oVGA_HS                                                 ; -45.679   ; 0.000 ; N/A      ; N/A     ; -11.240             ;
 ;  pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -4111.900 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -3874.202 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 +----------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
 
 
@@ -842,9 +842,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                          ; To Clock                                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11694    ; 0        ; 0        ; 0        ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11703    ; 0        ; 0        ; 0        ;
 ; VGA_Ctrl:u9|oVGA_HS                                                 ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1        ; 7273     ; 0        ; 0        ;
-; VGA_Ctrl:u9|oVGA_HS                                                 ; VGA_Ctrl:u9|oVGA_HS                                                 ; 0        ; 0        ; 0        ; 347      ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; VGA_Ctrl:u9|oVGA_HS                                                 ; 0        ; 0        ; 0        ; 333      ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -854,9 +854,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                          ; To Clock                                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
-; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11694    ; 0        ; 0        ; 0        ;
+; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11703    ; 0        ; 0        ; 0        ;
 ; VGA_Ctrl:u9|oVGA_HS                                                 ; pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1        ; 7273     ; 0        ; 0        ;
-; VGA_Ctrl:u9|oVGA_HS                                                 ; VGA_Ctrl:u9|oVGA_HS                                                 ; 0        ; 0        ; 0        ; 347      ;
+; VGA_Ctrl:u9|oVGA_HS                                                 ; VGA_Ctrl:u9|oVGA_HS                                                 ; 0        ; 0        ; 0        ; 333      ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -883,7 +883,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 1     ; 1    ;
 ; Unconstrained Input Port Paths  ; 91    ; 91   ;
 ; Unconstrained Output Ports      ; 13    ; 13   ;
-; Unconstrained Output Port Paths ; 213   ; 213  ;
+; Unconstrained Output Port Paths ; 222   ; 222  ;
 +---------------------------------+-------+------+
 
 
@@ -965,7 +965,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue Oct  7 13:19:21 2025
+    Info: Processing started: Tue Oct  7 13:37:10 2025
 Info: Command: quartus_sta EXE31 -c VGAtop
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 96 assignments for entity "DE10_Standard" -- entity does not exist in design
@@ -1088,25 +1088,25 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.638
+Info (332146): Worst-case setup slack is -7.445
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.638           -4111.900 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -4.206             -46.173 VGA_Ctrl:u9|oVGA_HS 
-Info (332146): Worst-case hold slack is 0.227
+    Info (332119):    -7.445           -3874.202 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -3.986             -45.679 VGA_Ctrl:u9|oVGA_HS 
+Info (332146): Worst-case hold slack is 0.291
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.227               0.000 VGA_Ctrl:u9|oVGA_HS 
-    Info (332119):     0.376               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.291               0.000 VGA_Ctrl:u9|oVGA_HS 
+    Info (332119):     0.378               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -11.009 VGA_Ctrl:u9|oVGA_HS 
+    Info (332119):    -0.394             -11.240 VGA_Ctrl:u9|oVGA_HS 
     Info (332119):     1.562               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.900               0.000 CLK 
-    Info (332119):    11.277               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    11.271               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1117,25 +1117,25 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.940
+Info (332146): Worst-case setup slack is -6.828
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.940           -3722.818 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -4.094             -45.079 VGA_Ctrl:u9|oVGA_HS 
-Info (332146): Worst-case hold slack is 0.272
+    Info (332119):    -6.828           -3511.406 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -3.782             -45.395 VGA_Ctrl:u9|oVGA_HS 
+Info (332146): Worst-case hold slack is 0.348
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.272               0.000 VGA_Ctrl:u9|oVGA_HS 
-    Info (332119):     0.376               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.348               0.000 VGA_Ctrl:u9|oVGA_HS 
+    Info (332119):     0.378               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -10.826 VGA_Ctrl:u9|oVGA_HS 
+    Info (332119):    -0.394             -10.275 VGA_Ctrl:u9|oVGA_HS 
     Info (332119):     1.562               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.926               0.000 CLK 
-    Info (332119):    11.253               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    11.247               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1146,25 +1146,25 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.991
+Info (332146): Worst-case setup slack is -5.628
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.991           -3110.450 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -2.378             -20.732 VGA_Ctrl:u9|oVGA_HS 
-Info (332146): Worst-case hold slack is 0.116
+    Info (332119):    -5.628           -2957.999 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -2.254             -19.990 VGA_Ctrl:u9|oVGA_HS 
+Info (332146): Worst-case hold slack is 0.127
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.116               0.000 VGA_Ctrl:u9|oVGA_HS 
-    Info (332119):     0.204               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.127               0.000 VGA_Ctrl:u9|oVGA_HS 
+    Info (332119):     0.183               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 0.149
+Info (332146): Worst-case minimum pulse width slack is 0.152
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.149               0.000 VGA_Ctrl:u9|oVGA_HS 
+    Info (332119):     0.152               0.000 VGA_Ctrl:u9|oVGA_HS 
     Info (332119):     1.562               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.643               0.000 CLK 
-    Info (332119):    11.389               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    11.390               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
@@ -1173,31 +1173,31 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.785
+Info (332146): Worst-case setup slack is -4.523
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.785           -2493.981 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -2.037             -17.559 VGA_Ctrl:u9|oVGA_HS 
-Info (332146): Worst-case hold slack is 0.111
+    Info (332119):    -4.523           -2355.912 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -1.930             -17.277 VGA_Ctrl:u9|oVGA_HS 
+Info (332146): Worst-case hold slack is 0.126
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.111               0.000 VGA_Ctrl:u9|oVGA_HS 
-    Info (332119):     0.190               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.126               0.000 VGA_Ctrl:u9|oVGA_HS 
+    Info (332119):     0.173               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 0.134
+Info (332146): Worst-case minimum pulse width slack is 0.148
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.134               0.000 VGA_Ctrl:u9|oVGA_HS 
+    Info (332119):     0.148               0.000 VGA_Ctrl:u9|oVGA_HS 
     Info (332119):     1.562               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.632               0.000 CLK 
-    Info (332119):    11.386               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    11.388               0.000 pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 103 warnings
-    Info: Peak virtual memory: 1047 megabytes
-    Info: Processing ended: Tue Oct  7 13:20:15 2025
-    Info: Elapsed time: 00:00:54
+    Info: Peak virtual memory: 1044 megabytes
+    Info: Processing ended: Tue Oct  7 13:38:09 2025
+    Info: Elapsed time: 00:00:59
     Info: Total CPU time (on all processors): 00:00:10
 
 

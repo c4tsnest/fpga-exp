@@ -1,0 +1,25 @@
+
+State Machine - |VGAtop|draw:u8|state
+Name state.111 state.110 state.101 state.100 state.011 state.010 state.001 state.000 
+state.000 0 0 0 0 0 0 0 0 
+state.001 0 0 0 0 0 0 1 1 
+state.010 0 0 0 0 0 1 0 1 
+state.011 0 0 0 0 1 0 0 1 
+state.100 0 0 0 1 0 0 0 1 
+state.101 0 0 1 0 0 0 0 1 
+state.110 0 1 0 0 0 0 0 1 
+state.111 1 0 0 0 0 0 0 1 
+
+State Machine - |VGAtop|XYtoHEX:u6|STY
+Name STY.011 STY.010 STY.001 STY.000 
+STY.000 0 0 0 0 
+STY.001 0 0 1 1 
+STY.010 0 1 0 1 
+STY.011 1 0 0 1 
+
+State Machine - |VGAtop|XYtoHEX:u6|STX
+Name STX.011 STX.010 STX.001 STX.000 
+STX.000 0 0 0 0 
+STX.001 0 0 1 1 
+STX.010 0 1 0 1 
+STX.011 1 0 0 1 
