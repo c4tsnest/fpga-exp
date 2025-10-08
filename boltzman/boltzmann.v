@@ -159,7 +159,7 @@ module DDS (
 
 
   /////////////////////////////////////////////////
-  ////////////		Bouncing	 	/////////////
+  ////////////	Bouncing	 	/////////////
   /////////////////////////////////////////////////
   reg         [       7:0] bounce_state          [num_rows:0];
   reg         [num_rows:0] bounce_done;
@@ -245,7 +245,7 @@ module DDS (
 
   generate
     genvar j;
-    for (j = 0; j <= num_rows; j = j + 1) begin : bounceGenerator
+    for (j = 0; j <= num_rows; j = j + 1) begin : gen_bounce
 
       // Build a few M10k blocks. One for each direction, one for barriers, and one for speed.
       M10K_512_18 north (
@@ -388,7 +388,7 @@ module DDS (
 
         if (reset) begin
           counter[j]                      <= (20'd0 + (20'd512 * j));
-          // state[j] 						<= 1'b 0 ;
+          // state[j] <= 1'b 0 ;
           north_next_write_address[j]     <= 9'd0;
           north_write_address[j]          <= 9'd0;
           south_next_write_address[j]     <= 9'd0;
@@ -840,7 +840,8 @@ module DDS (
 
 
             // CONDITIONAL STATE TRANSITION
-            bounce_state[j] <= (barrier_looping_base[j] == (barrier_address_base[j] + 9'd 1)) ? 8'd 4 : 8'd 3 ;
+            bounce_state[j] <=
+		    (barrier_looping_base[j] == (barrier_address_base[j] + 9'd 1)) ? 8'd 4 : 8'd 3 ;
           end
 
           // Clear cells with barriers (now writing same cells which we read)
@@ -905,7 +906,8 @@ module DDS (
             naught_looping_base[j] <= (naught_looping_base[j] + 9'd1);
 
             // CONDITIONAL STATE TRANSITION
-            bounce_state[j] <= (barrier_looping_base[j] == (barrier_address_base[j] + 9'd 1)) ? 8'd 5 : 8'd4 ;
+            bounce_state[j] <=
+	      (barrier_looping_base[j] == (barrier_address_base[j] + 9'd 1)) ? 8'd 5 : 8'd4 ;
 
           end
 
@@ -1113,10 +1115,21 @@ module DDS (
           if (bounce_state[j] == 8'd17) begin
 
             // SET M10K WRITE DATA (ENFORCE BOUNDARY CONDITIONS)
-            north_data_in[j] 		<= ((j==0) ? north_init : ((j==num_rows) ? north_init : ((north_looping_base[j]==9'd 2) ? north_init : nN_new[j]))) ;
-            south_data_in[j] 		<= ((j==0) ? south_init : ((j==num_rows) ? south_init : ((north_looping_base[j]==9'd 2) ? south_init : nS_new[j]))) ;
-            east_data_in[j] 		<= ((j==0) ? east_init : ((j==num_rows) ? east_init : ((north_looping_base[j]==9'd 2) ? east_init : nE_new[j]))) ;
-            west_data_in[j] 		<= ((j==0) ? west_init : ((j==num_rows) ? west_init : ((north_looping_base[j]==9'd 2) ? west_init : nW_new[j]))) ;
+            north_data_in[j] <=
+		    ((j==0) ? north_init :
+		    ((j==num_rows) ? north_init :
+		    ((north_looping_base[j]==9'd 2) ? north_init : nN_new[j]))) ;
+            south_data_in[j] <=
+		    ((j==0) ? south_init :
+		    ((j==num_rows) ? south_init :
+		    ((north_looping_base[j]==9'd 2) ? south_init : nS_new[j]))) ;
+            east_data_in[j] <= ((j==0) ? east_init :
+		    ((j==num_rows) ? east_init :
+		    ((north_looping_base[j]==9'd 2) ? east_init : nE_new[j]))) ;
+            west_data_in[j] <= ((j==0) ? west_init :
+		    ((j==num_rows) ? west_init :
+		    ((north_looping_base[j]==9'd 2) ? west_init :
+		    nW_new[j]))) ;
             northeast_data_in[j] 	<= ((j==0) ? northeast_init : ((j==num_rows) ? northeast_init : ((north_looping_base[j]==9'd 2) ? northeast_init : nNE_new[j]))) ;
             northwest_data_in[j] 	<= ((j==0) ? northwest_init : ((j==num_rows) ? northwest_init : ((north_looping_base[j]==9'd 2) ? northwest_init : nNW_new[j]))) ;
             southeast_data_in[j] 	<= ((j==0) ? southeast_init : ((j==num_rows) ? southeast_init : ((north_looping_base[j]==9'd 2) ? southeast_init : nSE_new[j]))) ;

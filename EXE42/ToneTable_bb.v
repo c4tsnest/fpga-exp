@@ -33,19 +33,20 @@
 //agreement for further details.
 
 module ToneTable (
-	address,
-	clock,
-	q);
+    address,
+    clock,
+    q
+);
 
-	input	[13:0]  address;
-	input	  clock;
-	output	[11:0]  q;
+  input [13:0] address;
+  input clock;
+  output [11:0] q;
 `ifndef ALTERA_RESERVED_QIS
-// synopsys translate_off
+  // synopsys translate_off
 `endif
-	tri1	  clock;
+  tri1 clock;
 `ifndef ALTERA_RESERVED_QIS
-// synopsys translate_on
+  // synopsys translate_on
 `endif
 
 endmodule

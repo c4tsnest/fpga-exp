@@ -80,7 +80,7 @@ module Soundtop (
   reg AO;
 
   assign NRST = KEY[0];
-  //   assign		AUD_DACDAT = AUD_ADCDAT;
+  // assign AUD_DACDAT = AUD_ADCDAT;
   assign AUD_DACDAT = AUD_DACLRCK == 0 ? SoL[15] : SoR[15];
 
 
@@ -109,7 +109,7 @@ module Soundtop (
           FlagOLR <= 0;
           FlagOut <= 1;
           {SoL, SoR} <= Storage[Sout];
-          //	       {SoL,SoR} <= 0;
+          // {SoL,SoR} <= 0;
           Sout <= Sout + 1;
         end else if (ADCLR1 == 0 && AUD_ADCLRCK == 1) begin
           FlagOLR <= 0;
