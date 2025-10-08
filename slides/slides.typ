@@ -210,7 +210,7 @@
 == 課題4 (音声入出力)
 
 #slide[
-  - メモリ使用量が3同様大きく、4-1ではfanoutも非常に大きい
+  - メモリ使用量が3同様大きく、4-1ではfanoutも他と比べ大きい
   #grid(
     columns: 2,
     gutter: 2cm,
@@ -260,17 +260,19 @@
 == 課題5(格子ボルツマン法の概要)
 
 #slide[
-  - 流体の粒子は2次元格子上に分布し、次の時刻に隣接する格子に移動するか静止する(物体に衝突した粒子は180°反射する)
+  - 流体は粒子の集合で、2次元の離散的な格子上に分布するモデル
+  - 次の時刻に隣接する格子に移動するか静止(物体に衝突した粒子は180°反射する)
+  - このモデルのもとで、各時刻での粒子の密度や速度分布を計算
   #figure(
     caption: [格子ボルツマン法の流れ(@lbm_python より引用)],
     grid(
       columns: 2,
       gutter: 0cm,
       [#figure(
-        image("img/lbm3.png", height: 60mm),
+        image("img/lbm3.png", height: 40mm),
       )<lbm1>],
       [#figure(
-        image("img/lbm4.png", height: 60mm),
+        image("img/lbm4.png", height: 40mm),
       )<lbm2>],
     ),
   )
