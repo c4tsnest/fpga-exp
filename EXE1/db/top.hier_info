@@ -3,17 +3,17 @@ CLOCK_50 => CLOCK_50.IN2
 SW[0] => SW[0].IN1
 SW[1] => SW[1].IN1
 SW[2] => SW[2].IN1
-LEDR[0] << selcnt[0].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[1] << mux4x4:mm.selout
-LEDR[2] << mux4x4:mm.selout
-LEDR[3] << mux4x4:mm.selout
-HEX0[0] << roulette:rr.ledout
-HEX0[1] << roulette:rr.ledout
-HEX0[2] << roulette:rr.ledout
-HEX0[3] << roulette:rr.ledout
-HEX0[4] << roulette:rr.ledout
-HEX0[5] << roulette:rr.ledout
-HEX0[6] << roulette:rr.ledout
+LEDR[0] <= selcnt[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= mux4x4:mm.selout
+LEDR[2] <= mux4x4:mm.selout
+LEDR[3] <= mux4x4:mm.selout
+HEX0[0] <= roulette:rr.ledout
+HEX0[1] <= roulette:rr.ledout
+HEX0[2] <= roulette:rr.ledout
+HEX0[3] <= roulette:rr.ledout
+HEX0[4] <= roulette:rr.ledout
+HEX0[5] <= roulette:rr.ledout
+HEX0[6] <= roulette:rr.ledout
 nrst => nrst.IN2
 
 
@@ -190,11 +190,6 @@ ledout[3] <= rr[3].DB_MAX_OUTPUT_PORT_TYPE
 ledout[4] <= rr[4].DB_MAX_OUTPUT_PORT_TYPE
 ledout[5] <= rr[5].DB_MAX_OUTPUT_PORT_TYPE
 ledout[6] <= <VCC>
-dir => rr.OUTPUTSELECT
-dir => rr.OUTPUTSELECT
-dir => rr.OUTPUTSELECT
-dir => rr.OUTPUTSELECT
-dir => rr.OUTPUTSELECT
-dir => rr.OUTPUTSELECT
+dir => ~NO_FANOUT~
 
 

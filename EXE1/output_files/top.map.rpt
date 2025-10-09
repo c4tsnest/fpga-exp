@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Mon Oct  6 14:25:56 2025
+Thu Oct  9 12:58:47 2025
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct  6 14:25:56 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct  9 12:58:47 2025       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
 ; Top-level Entity Name           ; top                                         ;
@@ -169,13 +169,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                   ;
-+----------------------------------+-----------------+------------------------+----------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path     ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------+---------+
-; Roulette.v                       ; yes             ; User Verilog HDL File  ; /home/sysele2503/EXE1/Roulette.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path         ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
+; Roulette.v                       ; yes             ; User Verilog HDL File  ; /home/sysele2503/exp/EXE1/Roulette.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -187,9 +187,9 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Combinational ALUT usage for logic          ; 43             ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 5              ;
+;     -- 6 input functions                    ; 4              ;
 ;     -- 5 input functions                    ; 0              ;
-;     -- 4 input functions                    ; 0              ;
+;     -- 4 input functions                    ; 1              ;
 ;     -- <=3 input functions                  ; 38             ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 39             ;
@@ -200,8 +200,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 39             ;
-; Total fan-out                               ; 258            ;
-; Average fan-out                             ; 2.26           ;
+; Total fan-out                               ; 246            ;
+; Average fan-out                             ; 2.16           ;
 +---------------------------------------------+----------------+
 
 
@@ -224,7 +224,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 39    ;
-; Number of registers using Synchronous Clear  ; 37    ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -238,7 +238,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top|roulette:rr|rr[1]     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|roulette:rr|rr[1]     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|mux4x4:mm|selout[0]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
@@ -249,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 39                          ;
-;     ENA SCLR          ; 5                           ;
+;     ENA               ; 5                           ;
 ;     SCLR              ; 32                          ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 1                           ;
@@ -259,12 +259,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     normal            ; 18                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         3 data inputs ; 6                           ;
-;         6 data inputs ; 5                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
+;         6 data inputs ; 4                           ;
 ; boundary_port         ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.60                        ;
+; Average LUT depth     ; 2.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -283,32 +285,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Oct  6 14:25:39 2025
+    Info: Processing started: Thu Oct  9 12:58:40 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EXE1 -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 4 design units, including 4 entities, in source file Roulette.v
-    Info (12023): Found entity 1: top File: /home/sysele2503/EXE1/Roulette.v Line: 2
-    Info (12023): Found entity 2: roulette File: /home/sysele2503/EXE1/Roulette.v Line: 19
-    Info (12023): Found entity 3: mux4x4 File: /home/sysele2503/EXE1/Roulette.v Line: 45
-    Info (12023): Found entity 4: counter32 File: /home/sysele2503/EXE1/Roulette.v Line: 56
+    Info (12023): Found entity 1: top File: /home/sysele2503/exp/EXE1/Roulette.v Line: 2
+    Info (12023): Found entity 2: roulette File: /home/sysele2503/exp/EXE1/Roulette.v Line: 34
+    Info (12023): Found entity 3: mux4x4 File: /home/sysele2503/exp/EXE1/Roulette.v Line: 66
+    Info (12023): Found entity 4: counter32 File: /home/sysele2503/exp/EXE1/Roulette.v Line: 81
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "counter32" for hierarchy "counter32:cc" File: /home/sysele2503/EXE1/Roulette.v Line: 13
-Info (12128): Elaborating entity "mux4x4" for hierarchy "mux4x4:mm" File: /home/sysele2503/EXE1/Roulette.v Line: 14
-Info (12128): Elaborating entity "roulette" for hierarchy "roulette:rr" File: /home/sysele2503/EXE1/Roulette.v Line: 15
+Info (12128): Elaborating entity "counter32" for hierarchy "counter32:cc" File: /home/sysele2503/exp/EXE1/Roulette.v Line: 18
+Info (12128): Elaborating entity "mux4x4" for hierarchy "mux4x4:mm" File: /home/sysele2503/exp/EXE1/Roulette.v Line: 23
+Info (12128): Elaborating entity "roulette" for hierarchy "roulette:rr" File: /home/sysele2503/exp/EXE1/Roulette.v Line: 30
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /home/sysele2503/EXE1/Roulette.v Line: 5
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /home/sysele2503/exp/EXE1/Roulette.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/sysele2503/exp/EXE1/Roulette.v Line: 4
 Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 44 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 644 megabytes
-    Info: Processing ended: Mon Oct  6 14:25:56 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 640 megabytes
+    Info: Processing ended: Thu Oct  9 12:58:47 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
 
 

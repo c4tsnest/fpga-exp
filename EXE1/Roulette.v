@@ -53,11 +53,11 @@ module roulette (
       rr <= 6'b1;
       cntout0 <= 0;
     end else if (cntout1 == 0 && cntout0 == 1) begin
-      if (dir == 0) begin
+//      if (dir == 0) begin
         rr <= {rr[4:0], rr[5]};
-      end else begin
-        rr <= {rr[0], rr[5:1]};
-      end
+//      end else begin
+//        rr <= {rr[0], rr[5:1]};
+//      end
     end
     cntout0 <= cntout1;
   end
