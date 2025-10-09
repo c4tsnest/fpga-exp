@@ -60,7 +60,8 @@
 == 課題1 (ルーレット)
 
 #slide[
-  - リソースはあまり変化せず、total fanoutが増加した
+  - リソース・性能はあまり変化せず
+  - fanoutは増加した
   #grid(
     columns: 2,
     gutter: 2cm,
@@ -83,9 +84,7 @@
       table(
         columns: 3,
         table.header([], [1-A], [1-B]),
-        [AUD_BCLK], [ MHz], [ MHz],
-        [AUD_BCLK], [ MHz], [ MHz],
-        [AUD_BCLK], [ MHz], [ MHz],
+        [CLOCK_50], [389.71 MHz], [388.95 MHz],
       ),
     )<freq1>],
   )
@@ -119,9 +118,7 @@
       table(
         columns: 2,
         table.header([], [2]),
-        [AUD_BCLK], [ MHz],
-        [AUD_BCLK], [ MHz],
-        [AUD_BCLK], [ MHz],
+        [CLK], [33.54 MHz],
       ),
     )<freq2>],
   )
@@ -191,9 +188,8 @@
       table(
         columns: 4,
         table.header([], [3-1], [3-2], [3-3]),
-        [AUD_BCLK], [ MHz], [ MHz], [ MHz],
-        [AUD_BCLK], [ MHz], [ MHz], [ MHz],
-        [AUD_BCLK], [ MHz], [ MHz], [ MHz],
+        [pll divclk], [125.42 MHz], [75.57 MHz], [108.33 MHz],
+        [oVGA_HS], [209.12 MHz], [188.93 MHz], [193.39 MHz],
       ),
     )<freq3>],
   )
@@ -249,7 +245,7 @@
 == 課題5
 
 #slide[
-  仮テーマ: 格子ボルツマン法による流体シミュレーション
+  コンセプト: 格子ボルツマン法による流体シミュレーション
   - 簡単な離散的モデルで、流体中の粒子の運動を逐次計算する
   - 結果をVGAで(できればリアルタイムに)表示する
   #figure(
@@ -257,12 +253,12 @@
     image("img/laminar.png", height: 55mm),
   )<lbm_image>]
 
-== 課題5(格子ボルツマン法の概要)
+== 課題5(格子ボルツマン法のアルゴリズムの概要)
 
 #slide[
   - 流体は粒子の集合で、2次元の離散的な格子上に分布するモデル
   - 次の時刻に隣接する格子に移動するか静止(物体に衝突した粒子は180°反射する)
-  - このモデルのもとで、各時刻での粒子の密度や速度分布を計算
+  - このモデルのもとで、各時刻での粒子の密度や速度分布を更新
   #figure(
     caption: [格子ボルツマン法の流れ(@lbm_python より引用)],
     grid(
@@ -278,11 +274,22 @@
   )
 ]
 
+
+== 課題5(アーキテクチャ(？)案)
+
+#slide[
+  #figure(
+    caption: [アーキテクチャ],
+    image("img/arch2.jpg", height: 100mm),
+  )<lbm1>
+]
+
+
 == 課題5(FPGAでの実装の利点#footnote([実際にFPGAでの高速化が報告されている @kenyon2007parcfd]))
 
 #slide[
   - 各格子点で独立に流入してくる粒子の情報を処理すればよいため、並列計算に向いている
-  // - 隣り合う格子、次の時刻のみの関係であり、複雑なフローがない
+  - 複雑な制御フローがない
   - メモリアクセスが規則的かつ局所的である
 ]
 
